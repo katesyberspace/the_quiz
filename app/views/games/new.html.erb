@@ -1,0 +1,14 @@
+<h1>Welcome <%= @user.name %>!</h1>
+
+<form action="/games" method="post">
+	<label for="">Create a new game</label>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="text" name="name" placeholder="Name your game...">
+	<button>Create game!</button>
+</form>
+
+<form action="/games/<%= @game.id %>" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="text" name="code" placeholder="Join with a code...">
+	<button>Join game!</button>
+</form>
