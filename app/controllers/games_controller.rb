@@ -6,12 +6,12 @@ class GamesController < ApplicationController
 
 	def new
 		#hardcoded to user, later change to current_user
-		@user = User.find_by(name: 'Kate')
+		@user = helpers.current_user
 	end
 
 	def create
 		#hardcoded to user, later change to current_user
-		@user = User.find_by(name: 'Kate')
+		@user = helpers.current_user
 		@game = Game.new
 		@game.name = params[:name]
 		@game.user_id = @user.id
