@@ -15,10 +15,7 @@
   <main>
   <div class="question-box">This is a question</div>
   <ul class="answears">
-    <li>Answear1</li>
-    <li>Answear2</li>
-    <li>Answear3</li>
-    <li>Answear4</li>
+    
   </ul>
   </main>
 
@@ -26,33 +23,51 @@
 
 
 <script>
-  const timer = document.querySelector('#timer')
+  const timer = document.querySelector('#timer'),
+        question = document.querySelector('.question-box'),
+        answ = document.querySelector('.answears');
+
   function start(){
-    let gameStarted = false;
-    // startTimer()
-    startGame()
+    startTimer()
   }
 
-  function startTimer(gameStarted){
-    let start = 3;
-    setInterval(() => {
-      if(start >= 0){
-        timer.textContent = start + 's left'
-        start--
-      }else if(start === 0){
-        gameStarted = true;
+  function startTimer(){
+    var timeleft = 5;
+    var startTimer = setInterval(function(){
+      timer.textContent = --timeleft + 's left';
+      if(timeleft === 0){
+        clearInterval(startTimer);
         startGame();
       }
-    }, 1000)
+    },1000);
+  }
+  function startGame(){
+    let result = fetch('https://opentdb.com/api.php?amount=1').then((res)=> {
+        return res.json();
+      })
+      .then(resJson => {
+        question.textContent = resJson.results[0].question
+        generateAnswears(resJson)
+      }); 
   }
 
-  function async startGame(){
-    let result = await fetch('https://opentdb.com/api.php?amount=1')
-    console.log('');
-    
+  function generateAnswears (result){
+    let answears = []
+    answears.push(result.results[0].correct_answer)
+    answears.push(...result.results[0].incorrect_answers)
+    answears.forEach(elem => {
+      let li = document.createElement('li')
+      li.textContent = elem;
+      li.classList.add('answear')
+      answ.appendChild(li)
+    });
   }
-
-  start()
+  answ.addEventListener('click', (e)=>{
+    e.target.classList.add('clicked')
+    // e.source.removeEventListener('click', arguments.callee)
+  })
+  
+  start();
 </script>
 
 <style>
@@ -110,6 +125,16 @@
     padding:10px 25px;
     margin:10px 0;
     text-align: center;
+  }
+
+  .answears li:hover{
+    background:#ccc;
+    box-shadow: 10px 10px 8px #888888;
+  }
+
+  .clicked{
+    background: #000;
+    color: #fff;
   }
 
 </style>
