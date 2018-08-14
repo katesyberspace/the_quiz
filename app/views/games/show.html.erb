@@ -62,10 +62,12 @@
       answ.appendChild(li)
     });
   }
-  answ.addEventListener('click', (e)=>{
-    e.target.classList.add('clicked')
-    // e.source.removeEventListener('click', arguments.callee)
-  })
+  answ.addEventListener('click', clicked)
+
+  function clicked(){
+    event.target.classList.add('clicked')
+    answ.removeEventListener("click", clicked);
+  }
   
   start();
 </script>
