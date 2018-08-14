@@ -26,41 +26,52 @@
   const timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
         answ = document.querySelector('.answears');
+  let questionNumber = 0;
 
   function start(){
-    startTimer()
+    startTimer(3, startGame)
   }
 
-  function startTimer(){
-    var timeleft = 5;
+  function startTimer(num, func){
     var startTimer = setInterval(function(){
-      timer.textContent = --timeleft + 's left';
-      if(timeleft === 0){
+      timer.textContent = --num + 's left';
+      if(num === 0){
         clearInterval(startTimer);
-        startGame();
+        func()
       }
     },1000);
   }
   function startGame(){
-    let result = fetch('https://opentdb.com/api.php?amount=1').then((res)=> {
-        return res.json();
-      })
-      .then(resJson => {
-        question.textContent = resJson.results[0].question
-        generateAnswears(resJson)
-      }); 
+    let result = JSON.parse('<%= @results.to_json.html_safe %>');
+    console.log(result[0].correct_answer);
+
+    displayQuestion(result, questionNumber)
+    displayAnswears(result, questionNumber)
+
+    // const someFunc = () => displayAnswears(result, questionNumber)
+    // startTimer(5, someFunc);
+    if(questionNumber <= 19){
+      questionNumber++
+      startTimer(7, startGame)
+    }
   }
 
-  function generateAnswears (result){
+  function displayQuestion(result, idx){
+    question.textContent = result[idx].question
+  }
+
+  function displayAnswears (result, idx){
+    answ.innerHTML = ''
     let answears = []
-    answears.push(result.results[0].correct_answer)
-    answears.push(...result.results[0].incorrect_answers)
+    answears.push(result[idx].correct_answer)
+    answears.push(...result[idx].incorrect_answers)
     answears.forEach(elem => {
       let li = document.createElement('li')
       li.textContent = elem;
       li.classList.add('answear')
       answ.appendChild(li)
     });
+    
   }
   answ.addEventListener('click', clicked)
 
