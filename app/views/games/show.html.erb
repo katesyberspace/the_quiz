@@ -14,7 +14,7 @@
 
   <main>
   <div class="question-box">This is a question</div>
-  <ul class="answears">
+  <ul class="answers">
     
   </ul>
   </main>
@@ -25,7 +25,7 @@
 <script>
   const timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
-        answ = document.querySelector('.answears');
+        answ = document.querySelector('.answers');
   let questionNumber = 0;
 
   function start(){
@@ -46,9 +46,9 @@
     console.log(result[0].correct_answer);
 
     displayQuestion(result, questionNumber)
-    displayAnswears(result, questionNumber)
+    displayAnswers(result, questionNumber)
 
-    // const someFunc = () => displayAnswears(result, questionNumber)
+    // const someFunc = () => displayAnswers(result, questionNumber)
     // startTimer(5, someFunc);
     if(questionNumber <= 19){
       questionNumber++
@@ -57,17 +57,17 @@
   }
 
   function displayQuestion(result, idx){
-    question.textContent = result[idx].question
+    question.textContent = decodeURIComponent(result[idx].question)
   }
 
-  function displayAnswears (result, idx){
+  function displayAnswers (result, idx){
     answ.innerHTML = ''
-    let answears = []
-    answears.push(result[idx].correct_answer)
-    answears.push(...result[idx].incorrect_answers)
-    answears.forEach(elem => {
+    let answers = []
+    answers.push(result[idx].correct_answer)
+    answers.push(...result[idx].incorrect_answers)
+    answers.forEach(elem => {
       let li = document.createElement('li')
-      li.textContent = elem;
+      li.textContent = decodeURIComponent(elem);
       li.classList.add('answear')
       answ.appendChild(li)
     });
@@ -127,20 +127,20 @@
     text-align: center;
   }
 
-  .answears{
+  .answers{
     margin: 50px auto;
     padding: 0;
     width:50%;
   }
 
-  .answears li{
+  .answers li{
     background-color:#DDD;
     padding:10px 25px;
     margin:10px 0;
     text-align: center;
   }
 
-  .answears li:hover{
+  .answers li:hover{
     background:#ccc;
     box-shadow: 10px 10px 8px #888888;
   }
