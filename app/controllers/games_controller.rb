@@ -22,13 +22,10 @@ class GamesController < ApplicationController
 			@games_user.game_id = @game.id
 			redirect_to "/games/#{ @game.id }"
 		else
-			render :show
+			render :new
 		end
 	end
 
 	def show
-		
 	end
-
-
 end
