@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     user.email = params[:email]
     user.password = params[:password]
     if user.save
-      redirect_to "/users/#{user.id}"
+      redirect_to "/games/new"
     else
       redirect_to '/'
     end
