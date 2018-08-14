@@ -1,5 +1,9 @@
 <h1>Welcome <%= @user.name %>!</h1>
 
+<%= form_tag "/sessions", method: 'delete' do %>
+  <button>log out</button>
+<% end %>
+
 <form action="/games" method="post">
 	<label for="">Create a new game</label>
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
