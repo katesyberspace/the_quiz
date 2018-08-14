@@ -1,0 +1,10 @@
+<h1>login page</h1>
+
+<%= form_tag "/sessions", method: 'post' do %>
+  <label for="">email</label>
+  <input type="email" name="email">
+  <label for="">password</label>
+  <input type="password" name="password">
+  <button>log in</button>
+
+<% end %>
