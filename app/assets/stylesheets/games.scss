@@ -9,8 +9,9 @@ $header-color: #69b4ff;
 body {
 	text-align: center;
 	font-family: $main-font;
-	background-color: black;
-	color: $contrast-color;
+	// change these colors back later
+	background-color: white;
+	color: black;
 	font-size: 2em;
 	padding: 6em 0;
 
@@ -43,10 +44,10 @@ form {
 		font-size: 1em;
 	}
 
-	input, 
-	button {
-		margin: 1em 0.5em;
-		font-size: 0.5em;
-		padding: none;
-	}
+	// input, 
+	// button {
+	// 	margin: 1em 0.5em;
+	// 	font-size: 0.5em;
+	// 	padding: none;
+	// }
 }

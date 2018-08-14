@@ -30,5 +30,9 @@ class GamesController < ApplicationController
 	def show
 		@response = HTTParty.get("https://opentdb.com/api.php?amount=20")
 		@results = @response["results"]
+		# @users = GamesUser.find_by(game_id: params[:id])
 	end
 end
+
+# current_character = User_character.order(id: :desc).find_by(user_id: current_user.id)
+# @character = Character.find(current_character.char_id)
