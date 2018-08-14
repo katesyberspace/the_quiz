@@ -28,5 +28,7 @@ class GamesController < ApplicationController
 	end
 
 	def show
+		@response = HTTParty.get("https://opentdb.com/api.php?amount=20")
+		@results = @response["results"]
 	end
 end
