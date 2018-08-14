@@ -5,10 +5,15 @@ class UsersController < ApplicationController
     user.email = params[:email]
     user.password = params[:password]
     if user.save
-      redirect "/users/#{user.id}"
+      redirect_to "/users/#{user.id}"
     else
-      render :new
+      redirect_to '/'
     end
   end
+
+  def show
+  end
+
+
 
 end

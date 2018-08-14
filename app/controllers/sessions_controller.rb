@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class SessionsController < ApplicationController
 
   def new
   end
@@ -11,9 +11,8 @@ class PagesController < ApplicationController
       # create new session - session is a global variable hash
       session[:user_id] = user.id
       redirect_to "/users/#{user.id}"
-  
     else
-      render :new
+      redirect_to "/"
     end
   end
 
