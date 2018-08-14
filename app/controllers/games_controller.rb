@@ -20,15 +20,13 @@ class GamesController < ApplicationController
 			@games_user = GamesUser.new
 			@games_user.user_id = @user.id
 			@games_user.game_id = @game.id
+			@games_user.save
 			redirect_to "/games/#{ @game.id }"
 		else
-			render :show
+			render :new
 		end
 	end
 
 	def show
-		
 	end
-
-
 end
