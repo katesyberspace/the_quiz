@@ -30,6 +30,7 @@ class GamesController < ApplicationController
 	def show
 		@response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
 		@results = @response["results"]
+		# make sure the records are being updated
 		user_records = GamesUser.where(game_id: params[:id]) do |user|
 		end
 		@users =[]

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   put '/games/:id/finish', to: 'games_users#update'
+  get '/games/:id/finish', to: 'games_users#show'
 
   get '/', to: 'pages#home'
   get '/login', to: 'sessions#new'
