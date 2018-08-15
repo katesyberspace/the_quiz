@@ -5,8 +5,7 @@ class GamesUsersController < ApplicationController
 	end
 
 	def create
-		#hardcoded to user, later change to current_user
-		@user = User.find_by(name: 'Kate')
+		@user = helpers.current_user
 		@game = Game.find_by(code: params[:code])
 		if @game
 			@games_user = GamesUser.new
