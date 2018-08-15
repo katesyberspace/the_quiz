@@ -7,15 +7,20 @@ class UsersController < ApplicationController
     if user.save
       # log the user in
       session[:user_id] = user.id
-      redirect_to "/games/new"
+      redirect_to "/users/#{user.id}"
     else
       redirect_to '/'
     end
   end
 
   def show
+    @user = helpers.current_user
+    @response = @response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
+    @results = @response["results"]
   end
 
 
 
 end
+
+
