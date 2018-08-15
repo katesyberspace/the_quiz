@@ -48,7 +48,7 @@
 
   //Main function run immediatelly at start
   (function start(){
-    startTimer(3, startGame)
+    // startTimer(3, startGame)
   })()
 
   function startTimer(num, func){
@@ -123,8 +123,7 @@
     //SSE
     var source = new EventSource("/sse");
       source.addEventListener('users', event => {
-      console.log(event.data);
-      // source.close()
+      startTimer(3, startGame)
     });
 
 

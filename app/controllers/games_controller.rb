@@ -1,20 +1,5 @@
 class GamesController < ApplicationController
 
-	# include ActionController::Live
-
-	# def second_user_connected
-	# 	puts params[:id]
-	# 	@all_users = GamesUser.where(game_id: params[:id])
-	# 	if @all_users.length > 1
-	# 		begin
-	# 			response.headers['Content-Type'] = 'text/event-stream'
-	# 			sse = SSE.new(response.stream, event: 'user')
-	# 			sse.write({ :users => @all_users })
-	# 		ensure
-	# 			sse.close
-	# 		end
-	# 	end
-	# end
 
 	def random_code
 	   ('AA000'..'ZZ999').to_a.sample
