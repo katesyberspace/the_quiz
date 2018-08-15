@@ -2,13 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .disabled{
-// 	display:none;
-// }
-
 $main-font: 'Roboto Mono', monospace;
-$timer-color: hotpink;
-$contrast-color: #b4ff69;
+$feat-color: hotpink;
 $header-color: #69b4ff;
 $box-color: #AFEED9;
 
@@ -37,17 +32,48 @@ body {
 		letter-spacing: 0.5em;
 	}
 
+	h2 {
+		margin: 0;
+	}
+
 	ul {
 		list-style: none;
 	}
 }
 
+//animation for header
+
+.lets-quiz {
+   animation: change-color 5000ms infinite ease-in-out;
+}
+
+  @keyframes change-color {
+    0% {color: $box-color}
+	50% {color: $header-color} 
+    100% { color: $box-color}
+  }
+
 //styles for form pages
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: $header-color;
+}
 
 form {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	text-align: center;
+	padding-top: 150px;
+
+	input {
+		background-color: aliceblue;
+	}
 
 	input, 
 	button {
@@ -59,11 +85,32 @@ form {
 	}
 	
 	button {
-		background-color: $contrast-color;
+		background-color: $box-color;
+		border: $box-color 3px solid;
+	}
+
+	button:hover {
+		background-color: black;
+		color: $box-color;
 	}
 }
 
+.logout {
+	background-color: $feat-color;
+	border: $feat-color 3px solid;
+}
+
+.logout:hover {
+	color: $feat-color;
+}
+
 //styles for show page
+
+.code {
+	font-size: 18px;
+	width: 70%;
+	margin: 0 auto;
+}
 
 .container {
   margin: 0 auto;
@@ -84,11 +131,11 @@ ul {
 }
 
 #timer {
-	border: $timer-color 1px solid;
+	border: $feat-color 1px solid;
 	padding: 10px 50px;
 	margin: 30px auto;
-	width: 40%;
-	color: $timer-color;
+	width: 35%;
+	color: $feat-color;
 }
 
 .question-box {
@@ -126,7 +173,7 @@ ul {
 
 //for browser screen
 
-@media (min-width: 600px) {
+@media only screen and (min-device-width: 700px) {
 	body {
 		font-size: 1em;
 	}
@@ -139,4 +186,138 @@ ul {
 	.users {
 		font-size: 0.8em;
 	}
+
+	form {
+		width: 65%;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 50px;
+	}
+
+	form input,
+	form button {
+		padding: 1em;
+		margin: 0.5em;
+		font-size: 0.8em;
+	}
+}
+
+//sticky note
+.anim750 {
+  transition: all 750ms ease-in-out;
+}
+
+#peel {
+	position: relative;
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+  
+  backface-visibility: hidden;
+}
+
+#peel .sticky{
+	transform: rotate(45deg);
+}
+
+#peel:hover .sticky{
+	transform: rotate(10deg);
+}
+
+#peel .sticky{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:180px;
+	height: 180px;
+}
+
+#peel .reveal .circle{
+	box-shadow: 0 1px 0px rgba(0,0,0,.15);
+  	font-weight: 200;
+  	line-height: 140px;
+  	text-align: center;
+  	cursor: pointer;
+}
+
+#peel .reveal .circle{
+	background: #fafafa;
+}
+
+#peel .circle_wrapper{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+
+#peel .circle{
+	position: absolute;
+	width: 140px;
+	height:  140px;
+	margin: 20px;
+	border-radius: 999px;
+}
+
+#peel .back{
+	height: 10px;
+	top: 30px;
+}
+
+#peel:hover .back{
+	height: 90px;
+	top: 110px;
+}
+
+#peel .back .circle{
+	margin-top: -130px;
+	background-color: #69B4FF;
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+}
+
+#peel:hover .back .circle{
+	margin-top: -50px;
+}
+
+#peel .front{
+	height: 150px;
+	bottom: 0;
+	top: auto;
+	-webkit-box-shadow: 0 -140px 20px -140px rgba(0,0,0,.3);
+}
+
+#peel:hover .front{
+	height: 70px;
+	-webkit-box-shadow: 0 -60px 10px -60px rgba(0,0,0,.1);
+}
+
+#peel .front .circle{
+	margin-top: -10px;
+	background: #69B4FF;
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #3f6c99 95%);
+  background-image: -moz-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #3f6c99 95%);
+  background-image: linear-gradient(bottom, rgba(251,236,63,.0) 75%, #3f6c99 95%);
+}
+
+#peel h4{
+  	font-weight: 200;
+  	text-align: center;
+	position: absolute;
+	width: 180px;
+	height: 140px;
+  	line-height: 140px;
+	transition: opacity 50ms linear 400ms;
+}
+
+#peel:hover h4{
+	opacity: 0;
+	transition: opacity 50ms linear 300ms;
+}
+
+#peel:hover .front .circle{
+	margin-top: -90px;
+	background-color: #5490cc;
+	background-position: 0 100px;
 }

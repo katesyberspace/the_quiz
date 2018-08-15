@@ -1,6 +1,7 @@
 class GamesUsersController < ApplicationController
 	
 	def show
+		@game = Game.find(params[:id])
 		render :win
 	end
 
