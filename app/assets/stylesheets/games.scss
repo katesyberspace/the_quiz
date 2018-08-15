@@ -23,11 +23,10 @@ body {
 	text-align: center;
 	font-family: $main-font;
 	color: black;
-	font-size: 2em;
+	font-size: 20px;
 	padding: 0;
 
 	h1 {
-		padding-top: 3em;
 		color: $header-color;
 		text-transform: uppercase;
 		letter-spacing: 0.5em;
@@ -100,21 +99,22 @@ ul {
   }
 
   .answers li{
-    background-color:#DDD;
+    border: $box-color 1px solid;
     padding:10px 25px;
-    margin:10px 0;
+    margin: 10px 0;
     text-align: center;
     font-size: 1.5em;
   }
 
   .answers li:hover{
-    background:#ccc;
-    box-shadow: 10px 10px 8px #888888;
+    background: black;
+    color: $box-color;
+    box-shadow: 5px 5px 8px $box-color;
   }
 
   .clicked{
     background: #000;
-    color: #fff;
+    color: $box-color;
   }
 
 //media queries
@@ -122,6 +122,10 @@ ul {
 @media (min-width: 600px) {
 	body {
 		font-size: 1em;
+	}
+
+	h1 {
+		padding-top: 0;
 	}
 
 	.code, 

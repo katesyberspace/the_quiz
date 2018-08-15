@@ -20,7 +20,7 @@
     <p><%= @game.code %></p>
   </div>
 
-  <div id="timer">10s left</div>
+  <div id="timer">10 seconds left</div>
 
   <main>
     <div class="question-box">Get ready to play...</div>
@@ -53,7 +53,7 @@
 
   function startTimer(num, func){
     var startTimer = setInterval(function(){
-      timer.textContent = --num + 's left';
+      timer.textContent = --num + ' seconds left';
       if(num === 0){
         clearInterval(startTimer);
         func()
