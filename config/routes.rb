@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/games/live" => 'games#one_touch_status_live'
+
   resources :games_users
   resources :games
   resources :users

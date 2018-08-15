@@ -1,5 +1,16 @@
 class GamesController < ApplicationController
 
+	include ActionController::Live
+
+	def second_user_connected
+	    response.headers['Content-Type'] = 'text/event-stream'
+	    sse = SSE.new(response.stream, event: 'time')
+	    loop do
+	      sse.write({ :time => Time.now })
+	      sleep 1
+	    end
+  	end
+
 	def random_code
 	   ('AA000'..'ZZ999').to_a.sample
 	end
