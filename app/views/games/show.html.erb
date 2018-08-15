@@ -4,10 +4,17 @@
 
   <div class="users">
     <h4>User Connected</h4>
-    <ul>
+<!--     <ul>
       <li>User1</li>
       <li>User2</li>
-    </ul>
+    </ul> -->
+      <ul>
+    <% @users.each do |user|%>
+        
+          <li><%= user.name %></li>
+        
+    <% end %>
+      </ul>
   </div>
 
   <div id="timer">10s left</div>
