@@ -1,19 +1,19 @@
-<h1>Welcome <%= @user.name %>!</h1>
-
-<%= form_tag "/sessions", method: 'delete' do %>
-  <button>log out</button>
-<% end %>
+<h1>welcome <%= @user.name %>!</h1>
 
 <form action="/games" method="post">
-	<label for="">Create a new game</label>
+	<label for="">create a new game</label>
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	<input type="text" name="name" placeholder="Name your game...">
-	<button>Create game!</button>
+	<button>create game!</button>
 </form>
 
 <form action="/games_users" method="post">
-	<label for="">Join with a code</label>
+	<label for="">join game with a code</label>
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	<input type="text" name="code" placeholder="Type code here...">
-	<button>Join game!</button>
+	<button>join game!</button>
 </form>
+
+<%= form_tag "/sessions", method: 'delete' do %>
+  <button class="logout">log out</button>
+<% end %>
