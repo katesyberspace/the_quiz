@@ -1,4 +1,4 @@
-<h1>Welcome to The Quiz</h1>
+<h1 class="lets-quiz">Let's Quiz</h1>
 
 <%= form_tag "/users", method: 'post' do %>
   <label for="">name</label>
@@ -12,3 +12,18 @@
 
 <a href="/login"> already a user? log in </a>
 
+<style>
+.lets-quiz {
+  animation: change-color 5000ms infinite ease-in-out;
+}
+
+@keyframes change-color {
+  0% {color: #69b4ff}
+  100% { color: #b4ff69}
+}
+
+
+
+
+
+</style>
