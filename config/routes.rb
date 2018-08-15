@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/games/:id/live" => 'games#second_user_connected'
+  mount SseRailsEngine::Engine, at: '/sse'
+  get "/games/live" => 'games#second_user_connected'
 
   resources :games_users
   resources :games

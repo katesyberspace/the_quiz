@@ -121,8 +121,8 @@
   }
 
     //SSE
-    var source = new EventSource("/games/<%= params[:id] %>/live");
-      source.addEventListener('user', function(event) {
+    var source = new EventSource("/sse");
+      source.addEventListener('users', event => {
       console.log(event.data);
       // source.close()
     });
