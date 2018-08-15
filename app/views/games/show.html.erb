@@ -23,14 +23,22 @@
 
 
 <script>
+  //Grab  elements from page
   const timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
         answ = document.querySelector('.answers');
-  let questionNumber = 0;
+        
+  const result = JSON.parse('<%= @results.to_json.html_safe %>');
 
-  function start(){
+  let questionNumber = 0;
+  let correctAnswer = ''
+  let score = 0;
+
+
+  //Main function run immediatelly at start
+  (function start(){
     startTimer(3, startGame)
-  }
+  })()
 
   function startTimer(num, func){
     var startTimer = setInterval(function(){
@@ -42,17 +50,15 @@
     },1000);
   }
   function startGame(){
-    let result = JSON.parse('<%= @results.to_json.html_safe %>');
-    console.log(result[0].correct_answer);
 
     displayQuestion(result, questionNumber)
     displayAnswers(result, questionNumber)
-
-    // const someFunc = () => displayAnswers(result, questionNumber)
-    // startTimer(5, someFunc);
+    answ.addEventListener('click', clicked)
     if(questionNumber <= 19){
       questionNumber++
       startTimer(7, startGame)
+    }else{
+      displayScore();
     }
   }
 
@@ -61,10 +67,17 @@
   }
 
   function displayAnswers (result, idx){
+    //Empty anwera container
     answ.innerHTML = ''
+    //Create a new array with new answers
     let answers = []
-    answers.push(result[idx].correct_answer)
     answers.push(...result[idx].incorrect_answers)
+    //Randomize the position of the correct answer
+    let randomIdx = Math.floor(Math.random() * 3)
+    answers.splice(randomIdx, 0, result[idx].correct_answer)
+    //Set the correct answer
+    correctAnswer = decodeURIComponent(result[idx].correct_answer)
+    //Display answers
     answers.forEach(elem => {
       let li = document.createElement('li')
       li.textContent = decodeURIComponent(elem);
@@ -73,14 +86,23 @@
     });
     
   }
-  answ.addEventListener('click', clicked)
+
+  // answ.addEventListener('click', clicked)
 
   function clicked(){
     event.target.classList.add('clicked')
     answ.removeEventListener("click", clicked);
+    if(event.target.textContent === correctAnswer){
+      score++
+    }else if(event.target.textContent !== correctAnswer){
+      score--
+    }
+    console.log(score);
   }
-  
-  start();
+
+  function displayScore(){
+
+  }
 </script>
 
 <style>
