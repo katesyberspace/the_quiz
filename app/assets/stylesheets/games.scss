@@ -15,7 +15,7 @@ $box-color: #AFEED9;
 .color-top {
 	height: 20px;
 	background-color: #69b4ff;
-	padding: none;
+	padding-bottom: 1em;
 	margin: none;
 }
 
@@ -25,6 +25,7 @@ body {
 	color: black;
 	font-size: 20px;
 	padding: 0;
+	margin: 0;
 
 	h1 {
 		color: $header-color;
@@ -92,32 +93,34 @@ ul {
     text-align: center;
 }
 
-  .answers{
+.answers {
     margin: 50px auto;
     padding: 0;
-    width:50%;
-  }
+    width: 50%;
+}
 
-  .answers li{
+.answers li {
     border: $box-color 1px solid;
     padding:10px 25px;
     margin: 10px 0;
     text-align: center;
     font-size: 1.5em;
-  }
+}
 
-  .answers li:hover{
+.answers li:hover {
     background: black;
     color: $box-color;
     box-shadow: 5px 5px 8px $box-color;
-  }
+}
 
-  .clicked{
+.clicked {
     background: #000;
     color: $box-color;
-  }
+}
 
 //media queries
+
+//for browser screen
 
 @media (min-width: 600px) {
 	body {

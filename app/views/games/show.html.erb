@@ -15,11 +15,6 @@
     </ul>
   </div>
 
-  <div class="code">
-    <p>If you are the room creator, send the below code to your friends to invite them to play with you.</p>
-    <p><%= @game.code %></p>
-  </div>
-
   <div id="timer">10 seconds left</div>
 
   <main>
@@ -27,6 +22,11 @@
     <ul class="answers">
       
     </ul>
+
+    <div class="code">
+      <p>If you are the room creator, send the below code to your friends to invite them to play with you.</p>
+      <p><%= @game.code %></p>
+    </div>
 
   </main>
 
@@ -130,72 +130,5 @@
 
 </script>
 
-<style>
-  /**{
-  box-sizing: border-box;
-  }
 
-  body{
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .container{
-    margin: 0 auto;
-  }
-
-  .users{
-    background: #ccc;
-  }
-
-  .users li{
-    padding: 0;
-  }
-
-  h1{
-    color: red;
-  }
-
-  ul{
-    list-style: none;
-  }
-
-  #timer{
-    background-color: #ddd;
-    padding:10px 50px;
-    margin: 30px auto;
-    width: 50%;
-    font-size:24px;
-  }
-
-  .question-box{
-    background-color: #ddd;
-    padding: 50px 100px;
-    text-align: center;
-  }
-
-  .answers{
-    margin: 50px auto;
-    padding: 0;
-    width:50%;
-  }
-
-  .answers li{
-    background-color:#DDD;
-    padding:10px 25px;
-    margin:10px 0;
-    text-align: center;
-  }
-
-  .answers li:hover{
-    background:#ccc;
-    box-shadow: 10px 10px 8px #888888;
-  }
-
-  .clicked{
-    background: #000;
-    color: #fff;
-  }
-*/
-</style>
 
