@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     if user.save
       # log the user in
       session[:user_id] = user.id
-      redirect_to "/users/#{user.id}"
+      redirect_to "/games/new"
     else
       redirect_to '/'
     end
@@ -19,8 +19,4 @@ class UsersController < ApplicationController
     @results = @response["results"]
   end
 
-
-
 end
-
-
