@@ -1,6 +1,5 @@
 class GamesUsersController < ApplicationController
 	
-
 	def show
 		@game = Game.find(params[:id])
 		render :win
@@ -14,9 +13,9 @@ class GamesUsersController < ApplicationController
 			@games_user.user_id = @user.id
 			@games_user.game_id = @game.id
 			@games_user.save
-
+			@second_user = true
 			SseRailsEngine.send_event('users', { foo: 'bar' })
-			
+
 			redirect_to "/games/#{ @game.id }"
 		else
 			redirect_to "/games/new"
