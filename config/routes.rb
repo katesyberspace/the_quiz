@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/games/live" => 'games#second_user_connected'
+  get "/games/:id/live" => 'games#second_user_connected'
 
   resources :games_users
   resources :games
