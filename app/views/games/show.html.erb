@@ -41,7 +41,6 @@
         answ = document.querySelector('.answers');
         
   const result = JSON.parse('<%= @results.to_json.html_safe %>');
-
   let questionNumber = 0;
   let correctAnswer = ''
   let score = 0;
@@ -62,11 +61,11 @@
     },1000);
   }
   function startGame(){
-
-    displayQuestion(result, questionNumber)
-    displayAnswers(result, questionNumber)
-    answ.addEventListener('click', clicked)
+    
     if(questionNumber <= 19){
+      displayQuestion(result, questionNumber)
+      displayAnswers(result, questionNumber)
+      answ.addEventListener('click', clicked)
       questionNumber++
       startTimer(7, startGame)
     }else{
@@ -114,6 +113,11 @@
 
   function displayScore(){
 
+    fetch('/game/<%= params[:id] %>/finish',
+    {
+      method: "POST",
+      body: score 
+    }).then(res=> console.log(res))
   }
 </script>
 
