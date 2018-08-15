@@ -3,26 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $main-font: 'Roboto Mono', monospace;
+$timer-color: hotpink;
 $contrast-color: #b4ff69;
 $header-color: #69b4ff;
+$box-color: #AFEED9;
+
+* {
+  box-sizing: border-box;
+}
+
+.color-top {
+	height: 20px;
+	background-color: #69b4ff;
+	padding: none;
+	margin: none;
+}
 
 body {
 	text-align: center;
 	font-family: $main-font;
-	// change these colors back later
-	background-color: white;
 	color: black;
 	font-size: 2em;
-	padding: 6em 0;
+	padding: 0;
 
 	h1 {
+		padding-top: 3em;
 		color: $header-color;
+		text-transform: uppercase;
+		letter-spacing: 0.5em;
 	}
 
 	ul {
 		list-style: none;
 	}
 }
+
+//styles for form pages
 
 form {
 	display: flex;
@@ -43,15 +59,73 @@ form {
 	}
 }
 
+//styles for show page
+
+.container {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users {
+	padding: 1em;
+}
+
+.users li {
+  padding: 0;
+  margin-left: 0;
+}
+
+#timer {
+	border: $timer-color 1px solid;
+	padding: 10px 50px;
+	margin: 30px auto;
+	width: 40%;
+	color: $timer-color;
+}
+
+.question-box {
+    background-color: $box-color;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+  .answers{
+    margin: 50px auto;
+    padding: 0;
+    width:50%;
+  }
+
+  .answers li{
+    background-color:#DDD;
+    padding:10px 25px;
+    margin:10px 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .answers li:hover{
+    background:#ccc;
+    box-shadow: 10px 10px 8px #888888;
+  }
+
+  .clicked{
+    background: #000;
+    color: #fff;
+  }
+
+//media queries
+
 @media (min-width: 600px) {
 	body {
 		font-size: 1em;
 	}
 
-	// input, 
-	// button {
-	// 	margin: 1em 0.5em;
-	// 	font-size: 0.5em;
-	// 	padding: none;
-	// }
+	.code, 
+	.users {
+		font-size: 0.8em;
+	}
 }
