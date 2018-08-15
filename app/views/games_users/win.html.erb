@@ -1,1 +1,9 @@
-<div>"Hello!"</div>
+<h1><%= @game.name %>: Results</h1>
+
+<% results = GamesUser.where(game_id: @game.id).order(score: :asc) %>
+<ul>
+  <% results.each do |result|%>
+    <li><%= User.find(result.user_id).name %> <%= result.score %></li>
+  <% end %>
+
+</ul>
