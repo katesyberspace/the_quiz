@@ -14,7 +14,8 @@
       <% end %>
     </ul>
   </div>
-
+  <p><%= @game.id %></p>
+  <%# <button class="btn disabled" href="" onclick="startTimer(3, startGame)">Start Game</button> %>
   <div id="timer">10 seconds left</div>
 
   <main>
@@ -38,7 +39,8 @@
   //Grab  elements from page
   const timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
-        answ = document.querySelector('.answers');
+        answ = document.querySelector('.answers'),
+        startBtn = document.querySelector('.btn');
         
   const result = JSON.parse('<%= @results.to_json.html_safe %>');
   let questionNumber = 0;
@@ -48,6 +50,8 @@
 
   //Main function run immediatelly at start
   (function start(){
+   
+    
     // startTimer(3, startGame)
   })()
 
@@ -121,12 +125,11 @@
   }
 
     //SSE
-    var source = new EventSource("/sse");
-      source.addEventListener('users', event => {
-      startTimer(3, startGame)
-    });
-
-
+  var source = new EventSource("/sse");
+    source.addEventListener('users', event => {
+    // startBtn.classList.remove('disabled')
+    startTimer(10, startGame)
+  });
 </script>
 
 
