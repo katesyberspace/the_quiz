@@ -1,13 +1,4118 @@
-<h1><%= @game.name %>: Results</h1>
+<main>
+  <h1><%= @game.name %>: Results</h1>
 
-<% results = GamesUser.where(game_id: @game.id).order(score: :asc) %>
-<ul class="answers">
-  <% results.each do |result|%>
-    <li><%= User.find(result.user_id).name %> <%= result.score %></li>
-  <% end %>
-</ul>
+  <% results = GamesUser.where(game_id: @game.id).order(score: :asc) %>
+  <ul class="answers">
+    <% results.each do |result|%>
+      <li><%= User.find(result.user_id).name %> <%= result.score %></li>
+    <% end %>
+  </ul>
+</main>
+<div class="wrapper">
+  <div class="confetti-149"></div>
+  <div class="confetti-148"></div>
+  <div class="confetti-147"></div>
+  <div class="confetti-146"></div>
+  <div class="confetti-145"></div>
+  <div class="confetti-144"></div>
+  <div class="confetti-143"></div>
+  <div class="confetti-142"></div>
+  <div class="confetti-141"></div>
+  <div class="confetti-140"></div>
+  <div class="confetti-139"></div>
+  <div class="confetti-138"></div>
+  <div class="confetti-137"></div>
+  <div class="confetti-136"></div>
+  <div class="confetti-135"></div>
+  <div class="confetti-134"></div>
+  <div class="confetti-133"></div>
+  <div class="confetti-132"></div>
+  <div class="confetti-131"></div>
+  <div class="confetti-130"></div>
+  <div class="confetti-129"></div>
+  <div class="confetti-128"></div>
+  <div class="confetti-127"></div>
+  <div class="confetti-126"></div>
+  <div class="confetti-125"></div>
+  <div class="confetti-124"></div>
+  <div class="confetti-123"></div>
+  <div class="confetti-122"></div>
+  <div class="confetti-121"></div>
+  <div class="confetti-120"></div>
+  <div class="confetti-119"></div>
+  <div class="confetti-118"></div>
+  <div class="confetti-117"></div>
+  <div class="confetti-116"></div>
+  <div class="confetti-115"></div>
+  <div class="confetti-114"></div>
+  <div class="confetti-113"></div>
+  <div class="confetti-112"></div>
+  <div class="confetti-111"></div>
+  <div class="confetti-110"></div>
+  <div class="confetti-109"></div>
+  <div class="confetti-108"></div>
+  <div class="confetti-107"></div>
+  <div class="confetti-106"></div>
+  <div class="confetti-105"></div>
+  <div class="confetti-104"></div>
+  <div class="confetti-103"></div>
+  <div class="confetti-102"></div>
+  <div class="confetti-101"></div>
+  <div class="confetti-100"></div>
+  <div class="confetti-99"></div>
+  <div class="confetti-98"></div>
+  <div class="confetti-97"></div>
+  <div class="confetti-96"></div>
+  <div class="confetti-95"></div>
+  <div class="confetti-94"></div>
+  <div class="confetti-93"></div>
+  <div class="confetti-92"></div>
+  <div class="confetti-91"></div>
+  <div class="confetti-90"></div>
+  <div class="confetti-89"></div>
+  <div class="confetti-88"></div>
+  <div class="confetti-87"></div>
+  <div class="confetti-86"></div>
+  <div class="confetti-85"></div>
+  <div class="confetti-84"></div>
+  <div class="confetti-83"></div>
+  <div class="confetti-82"></div>
+  <div class="confetti-81"></div>
+  <div class="confetti-80"></div>
+  <div class="confetti-79"></div>
+  <div class="confetti-78"></div>
+  <div class="confetti-77"></div>
+  <div class="confetti-76"></div>
+  <div class="confetti-75"></div>
+  <div class="confetti-74"></div>
+  <div class="confetti-73"></div>
+  <div class="confetti-72"></div>
+  <div class="confetti-71"></div>
+  <div class="confetti-70"></div>
+  <div class="confetti-69"></div>
+  <div class="confetti-68"></div>
+  <div class="confetti-67"></div>
+  <div class="confetti-66"></div>
+  <div class="confetti-65"></div>
+  <div class="confetti-64"></div>
+  <div class="confetti-63"></div>
+  <div class="confetti-62"></div>
+  <div class="confetti-61"></div>
+  <div class="confetti-60"></div>
+  <div class="confetti-59"></div>
+  <div class="confetti-58"></div>
+  <div class="confetti-57"></div>
+  <div class="confetti-56"></div>
+  <div class="confetti-55"></div>
+  <div class="confetti-54"></div>
+  <div class="confetti-53"></div>
+  <div class="confetti-52"></div>
+  <div class="confetti-51"></div>
+  <div class="confetti-50"></div>
+  <div class="confetti-49"></div>
+  <div class="confetti-48"></div>
+  <div class="confetti-47"></div>
+  <div class="confetti-46"></div>
+  <div class="confetti-45"></div>
+  <div class="confetti-44"></div>
+  <div class="confetti-43"></div>
+  <div class="confetti-42"></div>
+  <div class="confetti-41"></div>
+  <div class="confetti-40"></div>
+  <div class="confetti-39"></div>
+  <div class="confetti-38"></div>
+  <div class="confetti-37"></div>
+  <div class="confetti-36"></div>
+  <div class="confetti-35"></div>
+  <div class="confetti-34"></div>
+  <div class="confetti-33"></div>
+  <div class="confetti-32"></div>
+  <div class="confetti-31"></div>
+  <div class="confetti-30"></div>
+  <div class="confetti-29"></div>
+  <div class="confetti-28"></div>
+  <div class="confetti-27"></div>
+  <div class="confetti-26"></div>
+  <div class="confetti-25"></div>
+  <div class="confetti-24"></div>
+  <div class="confetti-23"></div>
+  <div class="confetti-22"></div>
+  <div class="confetti-21"></div>
+  <div class="confetti-20"></div>
+  <div class="confetti-19"></div>
+  <div class="confetti-18"></div>
+  <div class="confetti-17"></div>
+  <div class="confetti-16"></div>
+  <div class="confetti-15"></div>
+  <div class="confetti-14"></div>
+  <div class="confetti-13"></div>
+  <div class="confetti-12"></div>
+  <div class="confetti-11"></div>
+  <div class="confetti-10"></div>
+  <div class="confetti-9"></div>
+  <div class="confetti-8"></div>
+  <div class="confetti-7"></div>
+  <div class="confetti-6"></div>
+  <div class="confetti-5"></div>
+  <div class="confetti-4"></div>
+  <div class="confetti-3"></div>
+  <div class="confetti-2"></div>
+  <div class="confetti-1"></div>
+  <div class="confetti-0"></div>
+</div>
+
+
 
 <style>
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: -50%;
+  min-height: 100vh;
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+.confetti-0 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 8%;
+  opacity: 1.4788308867;
+  -webkit-transform: rotate(111.7618769812deg);
+          transform: rotate(111.7618769812deg);
+  -webkit-animation: drop-0 4.385353154s 0.6199291201s infinite;
+          animation: drop-0 4.385353154s 0.6199291201s infinite;
+}
+
+@-webkit-keyframes drop-0 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-0 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-1 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 36%;
+  opacity: 0.9333186768;
+  -webkit-transform: rotate(124.3960446684deg);
+          transform: rotate(124.3960446684deg);
+  -webkit-animation: drop-1 4.1146574131s 0.0098888076s infinite;
+          animation: drop-1 4.1146574131s 0.0098888076s infinite;
+}
+
+@-webkit-keyframes drop-1 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+
+@keyframes drop-1 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+.confetti-2 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 99%;
+  opacity: 1.3089769611;
+  -webkit-transform: rotate(107.2330906541deg);
+          transform: rotate(107.2330906541deg);
+  -webkit-animation: drop-2 4.4283638593s 0.1605594347s infinite;
+          animation: drop-2 4.4283638593s 0.1605594347s infinite;
+}
+
+@-webkit-keyframes drop-2 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+
+@keyframes drop-2 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+.confetti-3 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 59%;
+  opacity: 0.6264625982;
+  -webkit-transform: rotate(331.5332458224deg);
+          transform: rotate(331.5332458224deg);
+  -webkit-animation: drop-3 4.2387746957s 0.449184578s infinite;
+          animation: drop-3 4.2387746957s 0.449184578s infinite;
+}
+
+@-webkit-keyframes drop-3 {
+  100% {
+    top: 110%;
+    left: 63%;
+  }
+}
+
+@keyframes drop-3 {
+  100% {
+    top: 110%;
+    left: 63%;
+  }
+}
+.confetti-4 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 85%;
+  opacity: 0.7948492194;
+  -webkit-transform: rotate(141.2043020286deg);
+          transform: rotate(141.2043020286deg);
+  -webkit-animation: drop-4 4.6948203052s 0.4550798389s infinite;
+          animation: drop-4 4.6948203052s 0.4550798389s infinite;
+}
+
+@-webkit-keyframes drop-4 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+
+@keyframes drop-4 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+.confetti-5 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 93%;
+  opacity: 1.0985167642;
+  -webkit-transform: rotate(319.0867371754deg);
+          transform: rotate(319.0867371754deg);
+  -webkit-animation: drop-5 4.7857397246s 0.1258580096s infinite;
+          animation: drop-5 4.7857397246s 0.1258580096s infinite;
+}
+
+@-webkit-keyframes drop-5 {
+  100% {
+    top: 110%;
+    left: 101%;
+  }
+}
+
+@keyframes drop-5 {
+  100% {
+    top: 110%;
+    left: 101%;
+  }
+}
+.confetti-6 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 13%;
+  opacity: 0.9326205537;
+  -webkit-transform: rotate(1.6129985325deg);
+          transform: rotate(1.6129985325deg);
+  -webkit-animation: drop-6 4.0313598846s 0.0487578625s infinite;
+          animation: drop-6 4.0313598846s 0.0487578625s infinite;
+}
+
+@-webkit-keyframes drop-6 {
+  100% {
+    top: 110%;
+    left: 24%;
+  }
+}
+
+@keyframes drop-6 {
+  100% {
+    top: 110%;
+    left: 24%;
+  }
+}
+.confetti-7 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 84%;
+  opacity: 1.2351295845;
+  -webkit-transform: rotate(299.8145332239deg);
+          transform: rotate(299.8145332239deg);
+  -webkit-animation: drop-7 4.0992991367s 0.3050508488s infinite;
+          animation: drop-7 4.0992991367s 0.3050508488s infinite;
+}
+
+@-webkit-keyframes drop-7 {
+  100% {
+    top: 110%;
+    left: 89%;
+  }
+}
+
+@keyframes drop-7 {
+  100% {
+    top: 110%;
+    left: 89%;
+  }
+}
+.confetti-8 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 86%;
+  opacity: 1.0402529926;
+  -webkit-transform: rotate(353.965412474deg);
+          transform: rotate(353.965412474deg);
+  -webkit-animation: drop-8 4.1804811231s 0.2648356754s infinite;
+          animation: drop-8 4.1804811231s 0.2648356754s infinite;
+}
+
+@-webkit-keyframes drop-8 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+
+@keyframes drop-8 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+.confetti-9 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 77%;
+  opacity: 0.7907689649;
+  -webkit-transform: rotate(16.6070187216deg);
+          transform: rotate(16.6070187216deg);
+  -webkit-animation: drop-9 4.2070228835s 0.6698541015s infinite;
+          animation: drop-9 4.2070228835s 0.6698541015s infinite;
+}
+
+@-webkit-keyframes drop-9 {
+  100% {
+    top: 110%;
+    left: 88%;
+  }
+}
+
+@keyframes drop-9 {
+  100% {
+    top: 110%;
+    left: 88%;
+  }
+}
+.confetti-10 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 19%;
+  opacity: 0.5639399263;
+  -webkit-transform: rotate(219.1323736329deg);
+          transform: rotate(219.1323736329deg);
+  -webkit-animation: drop-10 4.7984503202s 0.3466918441s infinite;
+          animation: drop-10 4.7984503202s 0.3466918441s infinite;
+}
+
+@-webkit-keyframes drop-10 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+
+@keyframes drop-10 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+.confetti-11 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 36%;
+  opacity: 1.224781323;
+  -webkit-transform: rotate(275.9513303282deg);
+          transform: rotate(275.9513303282deg);
+  -webkit-animation: drop-11 4.7445590179s 0.2681324873s infinite;
+          animation: drop-11 4.7445590179s 0.2681324873s infinite;
+}
+
+@-webkit-keyframes drop-11 {
+  100% {
+    top: 110%;
+    left: 46%;
+  }
+}
+
+@keyframes drop-11 {
+  100% {
+    top: 110%;
+    left: 46%;
+  }
+}
+.confetti-12 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 52%;
+  opacity: 0.6633845113;
+  -webkit-transform: rotate(101.4972232123deg);
+          transform: rotate(101.4972232123deg);
+  -webkit-animation: drop-12 4.8358084327s 0.0225786135s infinite;
+          animation: drop-12 4.8358084327s 0.0225786135s infinite;
+}
+
+@-webkit-keyframes drop-12 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+
+@keyframes drop-12 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+.confetti-13 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 22%;
+  opacity: 0.9225807924;
+  -webkit-transform: rotate(174.0266641513deg);
+          transform: rotate(174.0266641513deg);
+  -webkit-animation: drop-13 4.5550977125s 0.5604992512s infinite;
+          animation: drop-13 4.5550977125s 0.5604992512s infinite;
+}
+
+@-webkit-keyframes drop-13 {
+  100% {
+    top: 110%;
+    left: 28%;
+  }
+}
+
+@keyframes drop-13 {
+  100% {
+    top: 110%;
+    left: 28%;
+  }
+}
+.confetti-14 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 15%;
+  opacity: 1.2074403798;
+  -webkit-transform: rotate(3.5039640551deg);
+          transform: rotate(3.5039640551deg);
+  -webkit-animation: drop-14 4.594610662s 0.9017015821s infinite;
+          animation: drop-14 4.594610662s 0.9017015821s infinite;
+}
+
+@-webkit-keyframes drop-14 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-14 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-15 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 40%;
+  opacity: 0.6647309782;
+  -webkit-transform: rotate(171.6505010581deg);
+          transform: rotate(171.6505010581deg);
+  -webkit-animation: drop-15 4.305283745s 0.2390284565s infinite;
+          animation: drop-15 4.305283745s 0.2390284565s infinite;
+}
+
+@-webkit-keyframes drop-15 {
+  100% {
+    top: 110%;
+    left: 53%;
+  }
+}
+
+@keyframes drop-15 {
+  100% {
+    top: 110%;
+    left: 53%;
+  }
+}
+.confetti-16 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 48%;
+  opacity: 1.3543644379;
+  -webkit-transform: rotate(353.8266850501deg);
+          transform: rotate(353.8266850501deg);
+  -webkit-animation: drop-16 4.8202756149s 0.4329201801s infinite;
+          animation: drop-16 4.8202756149s 0.4329201801s infinite;
+}
+
+@-webkit-keyframes drop-16 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+
+@keyframes drop-16 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+.confetti-17 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 75%;
+  opacity: 0.7297920842;
+  -webkit-transform: rotate(251.0479833258deg);
+          transform: rotate(251.0479833258deg);
+  -webkit-animation: drop-17 4.4131787938s 0.6310094345s infinite;
+          animation: drop-17 4.4131787938s 0.6310094345s infinite;
+}
+
+@-webkit-keyframes drop-17 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+
+@keyframes drop-17 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+.confetti-18 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 93%;
+  opacity: 0.6010697944;
+  -webkit-transform: rotate(198.7916065565deg);
+          transform: rotate(198.7916065565deg);
+  -webkit-animation: drop-18 4.505588341s 0.0223948559s infinite;
+          animation: drop-18 4.505588341s 0.0223948559s infinite;
+}
+
+@-webkit-keyframes drop-18 {
+  100% {
+    top: 110%;
+    left: 105%;
+  }
+}
+
+@keyframes drop-18 {
+  100% {
+    top: 110%;
+    left: 105%;
+  }
+}
+.confetti-19 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 34%;
+  opacity: 1.3954103665;
+  -webkit-transform: rotate(250.3777157824deg);
+          transform: rotate(250.3777157824deg);
+  -webkit-animation: drop-19 4.2811309813s 0.1925599973s infinite;
+          animation: drop-19 4.2811309813s 0.1925599973s infinite;
+}
+
+@-webkit-keyframes drop-19 {
+  100% {
+    top: 110%;
+    left: 47%;
+  }
+}
+
+@keyframes drop-19 {
+  100% {
+    top: 110%;
+    left: 47%;
+  }
+}
+.confetti-20 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 31%;
+  opacity: 1.1122256059;
+  -webkit-transform: rotate(348.5754527873deg);
+          transform: rotate(348.5754527873deg);
+  -webkit-animation: drop-20 4.4941098351s 0.8275302134s infinite;
+          animation: drop-20 4.4941098351s 0.8275302134s infinite;
+}
+
+@-webkit-keyframes drop-20 {
+  100% {
+    top: 110%;
+    left: 32%;
+  }
+}
+
+@keyframes drop-20 {
+  100% {
+    top: 110%;
+    left: 32%;
+  }
+}
+.confetti-21 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 2%;
+  opacity: 1.2369481642;
+  -webkit-transform: rotate(148.5464863501deg);
+          transform: rotate(148.5464863501deg);
+  -webkit-animation: drop-21 4.1141100218s 0.0772763881s infinite;
+          animation: drop-21 4.1141100218s 0.0772763881s infinite;
+}
+
+@-webkit-keyframes drop-21 {
+  100% {
+    top: 110%;
+    left: 8%;
+  }
+}
+
+@keyframes drop-21 {
+  100% {
+    top: 110%;
+    left: 8%;
+  }
+}
+.confetti-22 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 50%;
+  opacity: 0.8482291275;
+  -webkit-transform: rotate(303.4630352235deg);
+          transform: rotate(303.4630352235deg);
+  -webkit-animation: drop-22 4.8242881745s 0.2404702862s infinite;
+          animation: drop-22 4.8242881745s 0.2404702862s infinite;
+}
+
+@-webkit-keyframes drop-22 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+
+@keyframes drop-22 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+.confetti-23 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 61%;
+  opacity: 1.3059808708;
+  -webkit-transform: rotate(107.2529761032deg);
+          transform: rotate(107.2529761032deg);
+  -webkit-animation: drop-23 4.5334432821s 0.4860538527s infinite;
+          animation: drop-23 4.5334432821s 0.4860538527s infinite;
+}
+
+@-webkit-keyframes drop-23 {
+  100% {
+    top: 110%;
+    left: 67%;
+  }
+}
+
+@keyframes drop-23 {
+  100% {
+    top: 110%;
+    left: 67%;
+  }
+}
+.confetti-24 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 68%;
+  opacity: 1.2072615609;
+  -webkit-transform: rotate(76.7513018177deg);
+          transform: rotate(76.7513018177deg);
+  -webkit-animation: drop-24 4.0751477287s 0.836778434s infinite;
+          animation: drop-24 4.0751477287s 0.836778434s infinite;
+}
+
+@-webkit-keyframes drop-24 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+
+@keyframes drop-24 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+.confetti-25 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 41%;
+  opacity: 0.6643703626;
+  -webkit-transform: rotate(86.8378503196deg);
+          transform: rotate(86.8378503196deg);
+  -webkit-animation: drop-25 4.6015558153s 0.9182723577s infinite;
+          animation: drop-25 4.6015558153s 0.9182723577s infinite;
+}
+
+@-webkit-keyframes drop-25 {
+  100% {
+    top: 110%;
+    left: 46%;
+  }
+}
+
+@keyframes drop-25 {
+  100% {
+    top: 110%;
+    left: 46%;
+  }
+}
+.confetti-26 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 17%;
+  opacity: 1.4260628469;
+  -webkit-transform: rotate(304.1620793213deg);
+          transform: rotate(304.1620793213deg);
+  -webkit-animation: drop-26 4.8377542986s 0.6900703525s infinite;
+          animation: drop-26 4.8377542986s 0.6900703525s infinite;
+}
+
+@-webkit-keyframes drop-26 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-26 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-27 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 78%;
+  opacity: 1.4218680314;
+  -webkit-transform: rotate(355.5203718412deg);
+          transform: rotate(355.5203718412deg);
+  -webkit-animation: drop-27 4.5882175582s 0.8591601971s infinite;
+          animation: drop-27 4.5882175582s 0.8591601971s infinite;
+}
+
+@-webkit-keyframes drop-27 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+
+@keyframes drop-27 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+.confetti-28 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 89%;
+  opacity: 1.4205904305;
+  -webkit-transform: rotate(230.8960516207deg);
+          transform: rotate(230.8960516207deg);
+  -webkit-animation: drop-28 4.4304582425s 0.3818949871s infinite;
+          animation: drop-28 4.4304582425s 0.3818949871s infinite;
+}
+
+@-webkit-keyframes drop-28 {
+  100% {
+    top: 110%;
+    left: 95%;
+  }
+}
+
+@keyframes drop-28 {
+  100% {
+    top: 110%;
+    left: 95%;
+  }
+}
+.confetti-29 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 70%;
+  opacity: 0.6378721341;
+  -webkit-transform: rotate(40.6869533787deg);
+          transform: rotate(40.6869533787deg);
+  -webkit-animation: drop-29 4.7233789968s 0.5790339919s infinite;
+          animation: drop-29 4.7233789968s 0.5790339919s infinite;
+}
+
+@-webkit-keyframes drop-29 {
+  100% {
+    top: 110%;
+    left: 83%;
+  }
+}
+
+@keyframes drop-29 {
+  100% {
+    top: 110%;
+    left: 83%;
+  }
+}
+.confetti-30 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 10%;
+  opacity: 0.9767241244;
+  -webkit-transform: rotate(144.3995822335deg);
+          transform: rotate(144.3995822335deg);
+  -webkit-animation: drop-30 4.8658778891s 0.6559105377s infinite;
+          animation: drop-30 4.8658778891s 0.6559105377s infinite;
+}
+
+@-webkit-keyframes drop-30 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-30 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-31 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 24%;
+  opacity: 0.8158031816;
+  -webkit-transform: rotate(357.1737249855deg);
+          transform: rotate(357.1737249855deg);
+  -webkit-animation: drop-31 4.769494386s 0.2731130674s infinite;
+          animation: drop-31 4.769494386s 0.2731130674s infinite;
+}
+
+@-webkit-keyframes drop-31 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+
+@keyframes drop-31 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+.confetti-32 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 84%;
+  opacity: 0.6035089316;
+  -webkit-transform: rotate(254.5583082536deg);
+          transform: rotate(254.5583082536deg);
+  -webkit-animation: drop-32 4.6591734824s 0.1726151917s infinite;
+          animation: drop-32 4.6591734824s 0.1726151917s infinite;
+}
+
+@-webkit-keyframes drop-32 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+
+@keyframes drop-32 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+.confetti-33 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 15%;
+  opacity: 1.4677955728;
+  -webkit-transform: rotate(351.9210760447deg);
+          transform: rotate(351.9210760447deg);
+  -webkit-animation: drop-33 4.1285072524s 0.4585491887s infinite;
+          animation: drop-33 4.1285072524s 0.4585491887s infinite;
+}
+
+@-webkit-keyframes drop-33 {
+  100% {
+    top: 110%;
+    left: 30%;
+  }
+}
+
+@keyframes drop-33 {
+  100% {
+    top: 110%;
+    left: 30%;
+  }
+}
+.confetti-34 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 38%;
+  opacity: 1.3567233733;
+  -webkit-transform: rotate(34.2232505695deg);
+          transform: rotate(34.2232505695deg);
+  -webkit-animation: drop-34 4.6322151257s 0.6551475087s infinite;
+          animation: drop-34 4.6322151257s 0.6551475087s infinite;
+}
+
+@-webkit-keyframes drop-34 {
+  100% {
+    top: 110%;
+    left: 47%;
+  }
+}
+
+@keyframes drop-34 {
+  100% {
+    top: 110%;
+    left: 47%;
+  }
+}
+.confetti-35 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 59%;
+  opacity: 0.5972959827;
+  -webkit-transform: rotate(256.6507516692deg);
+          transform: rotate(256.6507516692deg);
+  -webkit-animation: drop-35 4.0220771128s 0.1921083075s infinite;
+          animation: drop-35 4.0220771128s 0.1921083075s infinite;
+}
+
+@-webkit-keyframes drop-35 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+
+@keyframes drop-35 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+.confetti-36 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 46%;
+  opacity: 1.0032476382;
+  -webkit-transform: rotate(226.9677461885deg);
+          transform: rotate(226.9677461885deg);
+  -webkit-animation: drop-36 4.5495174736s 0.7722787029s infinite;
+          animation: drop-36 4.5495174736s 0.7722787029s infinite;
+}
+
+@-webkit-keyframes drop-36 {
+  100% {
+    top: 110%;
+    left: 58%;
+  }
+}
+
+@keyframes drop-36 {
+  100% {
+    top: 110%;
+    left: 58%;
+  }
+}
+.confetti-37 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 79%;
+  opacity: 0.8144819667;
+  -webkit-transform: rotate(165.5226017656deg);
+          transform: rotate(165.5226017656deg);
+  -webkit-animation: drop-37 4.2906648684s 0.1629097405s infinite;
+          animation: drop-37 4.2906648684s 0.1629097405s infinite;
+}
+
+@-webkit-keyframes drop-37 {
+  100% {
+    top: 110%;
+    left: 81%;
+  }
+}
+
+@keyframes drop-37 {
+  100% {
+    top: 110%;
+    left: 81%;
+  }
+}
+.confetti-38 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 77%;
+  opacity: 1.3530524383;
+  -webkit-transform: rotate(58.6102508972deg);
+          transform: rotate(58.6102508972deg);
+  -webkit-animation: drop-38 4.318515541s 0.1665849866s infinite;
+          animation: drop-38 4.318515541s 0.1665849866s infinite;
+}
+
+@-webkit-keyframes drop-38 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+
+@keyframes drop-38 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+.confetti-39 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 95%;
+  opacity: 1.4573742489;
+  -webkit-transform: rotate(73.0352300122deg);
+          transform: rotate(73.0352300122deg);
+  -webkit-animation: drop-39 4.4790194732s 0.0812172004s infinite;
+          animation: drop-39 4.4790194732s 0.0812172004s infinite;
+}
+
+@-webkit-keyframes drop-39 {
+  100% {
+    top: 110%;
+    left: 103%;
+  }
+}
+
+@keyframes drop-39 {
+  100% {
+    top: 110%;
+    left: 103%;
+  }
+}
+.confetti-40 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 51%;
+  opacity: 0.8033881561;
+  -webkit-transform: rotate(310.101595675deg);
+          transform: rotate(310.101595675deg);
+  -webkit-animation: drop-40 4.8384014375s 0.7219161979s infinite;
+          animation: drop-40 4.8384014375s 0.7219161979s infinite;
+}
+
+@-webkit-keyframes drop-40 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+
+@keyframes drop-40 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+.confetti-41 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 51%;
+  opacity: 1.0166806233;
+  -webkit-transform: rotate(156.8710494679deg);
+          transform: rotate(156.8710494679deg);
+  -webkit-animation: drop-41 4.6958869648s 0.0373081509s infinite;
+          animation: drop-41 4.6958869648s 0.0373081509s infinite;
+}
+
+@-webkit-keyframes drop-41 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+
+@keyframes drop-41 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+.confetti-42 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 5%;
+  opacity: 0.98071719;
+  -webkit-transform: rotate(225.4200977295deg);
+          transform: rotate(225.4200977295deg);
+  -webkit-animation: drop-42 4.2847744293s 0.4258760074s infinite;
+          animation: drop-42 4.2847744293s 0.4258760074s infinite;
+}
+
+@-webkit-keyframes drop-42 {
+  100% {
+    top: 110%;
+    left: 20%;
+  }
+}
+
+@keyframes drop-42 {
+  100% {
+    top: 110%;
+    left: 20%;
+  }
+}
+.confetti-43 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 95%;
+  opacity: 0.829365793;
+  -webkit-transform: rotate(194.5692700139deg);
+          transform: rotate(194.5692700139deg);
+  -webkit-animation: drop-43 4.3909745685s 0.088808964s infinite;
+          animation: drop-43 4.3909745685s 0.088808964s infinite;
+}
+
+@-webkit-keyframes drop-43 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+
+@keyframes drop-43 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+.confetti-44 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 11%;
+  opacity: 0.5570568344;
+  -webkit-transform: rotate(132.1473130574deg);
+          transform: rotate(132.1473130574deg);
+  -webkit-animation: drop-44 4.1624546696s 0.4921553746s infinite;
+          animation: drop-44 4.1624546696s 0.4921553746s infinite;
+}
+
+@-webkit-keyframes drop-44 {
+  100% {
+    top: 110%;
+    left: 25%;
+  }
+}
+
+@keyframes drop-44 {
+  100% {
+    top: 110%;
+    left: 25%;
+  }
+}
+.confetti-45 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 75%;
+  opacity: 1.37609147;
+  -webkit-transform: rotate(283.1577759181deg);
+          transform: rotate(283.1577759181deg);
+  -webkit-animation: drop-45 4.6903385538s 0.9812614712s infinite;
+          animation: drop-45 4.6903385538s 0.9812614712s infinite;
+}
+
+@-webkit-keyframes drop-45 {
+  100% {
+    top: 110%;
+    left: 90%;
+  }
+}
+
+@keyframes drop-45 {
+  100% {
+    top: 110%;
+    left: 90%;
+  }
+}
+.confetti-46 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 21%;
+  opacity: 1.0819665552;
+  -webkit-transform: rotate(70.9698606747deg);
+          transform: rotate(70.9698606747deg);
+  -webkit-animation: drop-46 4.6886937032s 0.2200198636s infinite;
+          animation: drop-46 4.6886937032s 0.2200198636s infinite;
+}
+
+@-webkit-keyframes drop-46 {
+  100% {
+    top: 110%;
+    left: 27%;
+  }
+}
+
+@keyframes drop-46 {
+  100% {
+    top: 110%;
+    left: 27%;
+  }
+}
+.confetti-47 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 82%;
+  opacity: 1.1076264454;
+  -webkit-transform: rotate(84.7458176801deg);
+          transform: rotate(84.7458176801deg);
+  -webkit-animation: drop-47 4.435047833s 0.7627625639s infinite;
+          animation: drop-47 4.435047833s 0.7627625639s infinite;
+}
+
+@-webkit-keyframes drop-47 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+
+@keyframes drop-47 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+.confetti-48 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 6%;
+  opacity: 1.375653393;
+  -webkit-transform: rotate(103.2690705915deg);
+          transform: rotate(103.2690705915deg);
+  -webkit-animation: drop-48 4.9905098848s 0.5604394896s infinite;
+          animation: drop-48 4.9905098848s 0.5604394896s infinite;
+}
+
+@-webkit-keyframes drop-48 {
+  100% {
+    top: 110%;
+    left: 12%;
+  }
+}
+
+@keyframes drop-48 {
+  100% {
+    top: 110%;
+    left: 12%;
+  }
+}
+.confetti-49 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 94%;
+  opacity: 0.9894668402;
+  -webkit-transform: rotate(61.9153661131deg);
+          transform: rotate(61.9153661131deg);
+  -webkit-animation: drop-49 4.5908724681s 0.5632857864s infinite;
+          animation: drop-49 4.5908724681s 0.5632857864s infinite;
+}
+
+@-webkit-keyframes drop-49 {
+  100% {
+    top: 110%;
+    left: 103%;
+  }
+}
+
+@keyframes drop-49 {
+  100% {
+    top: 110%;
+    left: 103%;
+  }
+}
+.confetti-50 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 12%;
+  opacity: 1.1968235107;
+  -webkit-transform: rotate(282.8047981961deg);
+          transform: rotate(282.8047981961deg);
+  -webkit-animation: drop-50 4.9216660138s 0.1856154488s infinite;
+          animation: drop-50 4.9216660138s 0.1856154488s infinite;
+}
+
+@-webkit-keyframes drop-50 {
+  100% {
+    top: 110%;
+    left: 22%;
+  }
+}
+
+@keyframes drop-50 {
+  100% {
+    top: 110%;
+    left: 22%;
+  }
+}
+.confetti-51 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 28%;
+  opacity: 0.5580817757;
+  -webkit-transform: rotate(8.6665046952deg);
+          transform: rotate(8.6665046952deg);
+  -webkit-animation: drop-51 4.9295505994s 0.0980308626s infinite;
+          animation: drop-51 4.9295505994s 0.0980308626s infinite;
+}
+
+@-webkit-keyframes drop-51 {
+  100% {
+    top: 110%;
+    left: 31%;
+  }
+}
+
+@keyframes drop-51 {
+  100% {
+    top: 110%;
+    left: 31%;
+  }
+}
+.confetti-52 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 23%;
+  opacity: 1.1132632368;
+  -webkit-transform: rotate(277.8088534838deg);
+          transform: rotate(277.8088534838deg);
+  -webkit-animation: drop-52 4.1716734859s 0.940030197s infinite;
+          animation: drop-52 4.1716734859s 0.940030197s infinite;
+}
+
+@-webkit-keyframes drop-52 {
+  100% {
+    top: 110%;
+    left: 30%;
+  }
+}
+
+@keyframes drop-52 {
+  100% {
+    top: 110%;
+    left: 30%;
+  }
+}
+.confetti-53 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 88%;
+  opacity: 0.6661546524;
+  -webkit-transform: rotate(158.2588958992deg);
+          transform: rotate(158.2588958992deg);
+  -webkit-animation: drop-53 4.6191005014s 0.5062736102s infinite;
+          animation: drop-53 4.6191005014s 0.5062736102s infinite;
+}
+
+@-webkit-keyframes drop-53 {
+  100% {
+    top: 110%;
+    left: 94%;
+  }
+}
+
+@keyframes drop-53 {
+  100% {
+    top: 110%;
+    left: 94%;
+  }
+}
+.confetti-54 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 91%;
+  opacity: 1.4082004616;
+  -webkit-transform: rotate(24.3914660171deg);
+          transform: rotate(24.3914660171deg);
+  -webkit-animation: drop-54 4.8138976786s 0.0702401714s infinite;
+          animation: drop-54 4.8138976786s 0.0702401714s infinite;
+}
+
+@-webkit-keyframes drop-54 {
+  100% {
+    top: 110%;
+    left: 99%;
+  }
+}
+
+@keyframes drop-54 {
+  100% {
+    top: 110%;
+    left: 99%;
+  }
+}
+.confetti-55 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 99%;
+  opacity: 1.4828394417;
+  -webkit-transform: rotate(257.8574091585deg);
+          transform: rotate(257.8574091585deg);
+  -webkit-animation: drop-55 4.2450396519s 0.9341794031s infinite;
+          animation: drop-55 4.2450396519s 0.9341794031s infinite;
+}
+
+@-webkit-keyframes drop-55 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+
+@keyframes drop-55 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+.confetti-56 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 27%;
+  opacity: 0.6996049068;
+  -webkit-transform: rotate(314.3178855686deg);
+          transform: rotate(314.3178855686deg);
+  -webkit-animation: drop-56 4.4951621794s 0.1193795746s infinite;
+          animation: drop-56 4.4951621794s 0.1193795746s infinite;
+}
+
+@-webkit-keyframes drop-56 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+
+@keyframes drop-56 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+.confetti-57 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 88%;
+  opacity: 0.7656585645;
+  -webkit-transform: rotate(29.5117545726deg);
+          transform: rotate(29.5117545726deg);
+  -webkit-animation: drop-57 4.1072265662s 0.1305331349s infinite;
+          animation: drop-57 4.1072265662s 0.1305331349s infinite;
+}
+
+@-webkit-keyframes drop-57 {
+  100% {
+    top: 110%;
+    left: 90%;
+  }
+}
+
+@keyframes drop-57 {
+  100% {
+    top: 110%;
+    left: 90%;
+  }
+}
+.confetti-58 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 61%;
+  opacity: 1.1718244293;
+  -webkit-transform: rotate(284.9238646651deg);
+          transform: rotate(284.9238646651deg);
+  -webkit-animation: drop-58 4.6286078724s 0.2187785925s infinite;
+          animation: drop-58 4.6286078724s 0.2187785925s infinite;
+}
+
+@-webkit-keyframes drop-58 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+
+@keyframes drop-58 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+.confetti-59 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 83%;
+  opacity: 0.783437298;
+  -webkit-transform: rotate(277.9164284571deg);
+          transform: rotate(277.9164284571deg);
+  -webkit-animation: drop-59 4.7488879351s 0.2230463422s infinite;
+          animation: drop-59 4.7488879351s 0.2230463422s infinite;
+}
+
+@-webkit-keyframes drop-59 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+
+@keyframes drop-59 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+.confetti-60 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 86%;
+  opacity: 1.0447149355;
+  -webkit-transform: rotate(237.7824770712deg);
+          transform: rotate(237.7824770712deg);
+  -webkit-animation: drop-60 4.8044135286s 0.3164008261s infinite;
+          animation: drop-60 4.8044135286s 0.3164008261s infinite;
+}
+
+@-webkit-keyframes drop-60 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+
+@keyframes drop-60 {
+  100% {
+    top: 110%;
+    left: 93%;
+  }
+}
+.confetti-61 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 53%;
+  opacity: 0.5331423188;
+  -webkit-transform: rotate(48.5974686322deg);
+          transform: rotate(48.5974686322deg);
+  -webkit-animation: drop-61 4.1537562982s 0.7931943755s infinite;
+          animation: drop-61 4.1537562982s 0.7931943755s infinite;
+}
+
+@-webkit-keyframes drop-61 {
+  100% {
+    top: 110%;
+    left: 64%;
+  }
+}
+
+@keyframes drop-61 {
+  100% {
+    top: 110%;
+    left: 64%;
+  }
+}
+.confetti-62 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 96%;
+  opacity: 1.4325428178;
+  -webkit-transform: rotate(251.647548147deg);
+          transform: rotate(251.647548147deg);
+  -webkit-animation: drop-62 4.0988545485s 0.5598096609s infinite;
+          animation: drop-62 4.0988545485s 0.5598096609s infinite;
+}
+
+@-webkit-keyframes drop-62 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+
+@keyframes drop-62 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+.confetti-63 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 56%;
+  opacity: 0.7481852028;
+  -webkit-transform: rotate(238.4434932877deg);
+          transform: rotate(238.4434932877deg);
+  -webkit-animation: drop-63 4.4681784406s 0.3619377507s infinite;
+          animation: drop-63 4.4681784406s 0.3619377507s infinite;
+}
+
+@-webkit-keyframes drop-63 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+
+@keyframes drop-63 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+.confetti-64 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 89%;
+  opacity: 1.4413493604;
+  -webkit-transform: rotate(312.0748339707deg);
+          transform: rotate(312.0748339707deg);
+  -webkit-animation: drop-64 4.6462789141s 0.7932308161s infinite;
+          animation: drop-64 4.6462789141s 0.7932308161s infinite;
+}
+
+@-webkit-keyframes drop-64 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+
+@keyframes drop-64 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+.confetti-65 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
+  top: -10%;
+  left: 41%;
+  opacity: 0.7102213919;
+  -webkit-transform: rotate(343.4634583185deg);
+          transform: rotate(343.4634583185deg);
+  -webkit-animation: drop-65 4.5841442933s 0.3035013012s infinite;
+          animation: drop-65 4.5841442933s 0.3035013012s infinite;
+}
+
+@-webkit-keyframes drop-65 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+
+@keyframes drop-65 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+.confetti-66 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 94%;
+  opacity: 0.737801271;
+  -webkit-transform: rotate(131.9867354515deg);
+          transform: rotate(131.9867354515deg);
+  -webkit-animation: drop-66 4.901629738s 0.7053848526s infinite;
+          animation: drop-66 4.901629738s 0.7053848526s infinite;
+}
+
+@-webkit-keyframes drop-66 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+
+@keyframes drop-66 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+.confetti-67 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 2%;
+  opacity: 1.0412185348;
+  -webkit-transform: rotate(179.3733446448deg);
+          transform: rotate(179.3733446448deg);
+  -webkit-animation: drop-67 4.8446368092s 0.5022433966s infinite;
+          animation: drop-67 4.8446368092s 0.5022433966s infinite;
+}
+
+@-webkit-keyframes drop-67 {
+  100% {
+    top: 110%;
+    left: 4%;
+  }
+}
+
+@keyframes drop-67 {
+  100% {
+    top: 110%;
+    left: 4%;
+  }
+}
+.confetti-68 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 93%;
+  opacity: 0.7366166136;
+  -webkit-transform: rotate(35.2262102311deg);
+          transform: rotate(35.2262102311deg);
+  -webkit-animation: drop-68 4.6845485379s 0.3449080207s infinite;
+          animation: drop-68 4.6845485379s 0.3449080207s infinite;
+}
+
+@-webkit-keyframes drop-68 {
+  100% {
+    top: 110%;
+    left: 107%;
+  }
+}
+
+@keyframes drop-68 {
+  100% {
+    top: 110%;
+    left: 107%;
+  }
+}
+.confetti-69 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 9%;
+  opacity: 0.6650898289;
+  -webkit-transform: rotate(28.8360319117deg);
+          transform: rotate(28.8360319117deg);
+  -webkit-animation: drop-69 4.5693880592s 0.1672147369s infinite;
+          animation: drop-69 4.5693880592s 0.1672147369s infinite;
+}
+
+@-webkit-keyframes drop-69 {
+  100% {
+    top: 110%;
+    left: 13%;
+  }
+}
+
+@keyframes drop-69 {
+  100% {
+    top: 110%;
+    left: 13%;
+  }
+}
+.confetti-70 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 9%;
+  opacity: 0.6567546687;
+  -webkit-transform: rotate(306.1512300444deg);
+          transform: rotate(306.1512300444deg);
+  -webkit-animation: drop-70 4.2834273058s 0.258213574s infinite;
+          animation: drop-70 4.2834273058s 0.258213574s infinite;
+}
+
+@-webkit-keyframes drop-70 {
+  100% {
+    top: 110%;
+    left: 11%;
+  }
+}
+
+@keyframes drop-70 {
+  100% {
+    top: 110%;
+    left: 11%;
+  }
+}
+.confetti-71 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 63%;
+  opacity: 0.8876522579;
+  -webkit-transform: rotate(177.6940777871deg);
+          transform: rotate(177.6940777871deg);
+  -webkit-animation: drop-71 4.5921434026s 0.1227871484s infinite;
+          animation: drop-71 4.5921434026s 0.1227871484s infinite;
+}
+
+@-webkit-keyframes drop-71 {
+  100% {
+    top: 110%;
+    left: 66%;
+  }
+}
+
+@keyframes drop-71 {
+  100% {
+    top: 110%;
+    left: 66%;
+  }
+}
+.confetti-72 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 2%;
+  opacity: 0.713518175;
+  -webkit-transform: rotate(183.1589529033deg);
+          transform: rotate(183.1589529033deg);
+  -webkit-animation: drop-72 4.0650230922s 0.6793274677s infinite;
+          animation: drop-72 4.0650230922s 0.6793274677s infinite;
+}
+
+@-webkit-keyframes drop-72 {
+  100% {
+    top: 110%;
+    left: 16%;
+  }
+}
+
+@keyframes drop-72 {
+  100% {
+    top: 110%;
+    left: 16%;
+  }
+}
+.confetti-73 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 78%;
+  opacity: 0.9078359512;
+  -webkit-transform: rotate(171.5992278576deg);
+          transform: rotate(171.5992278576deg);
+  -webkit-animation: drop-73 4.7122530631s 0.6002915166s infinite;
+          animation: drop-73 4.7122530631s 0.6002915166s infinite;
+}
+
+@-webkit-keyframes drop-73 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+
+@keyframes drop-73 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+.confetti-74 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 100%;
+  opacity: 1.3912651168;
+  -webkit-transform: rotate(78.8109219803deg);
+          transform: rotate(78.8109219803deg);
+  -webkit-animation: drop-74 4.4057397156s 0.3143613081s infinite;
+          animation: drop-74 4.4057397156s 0.3143613081s infinite;
+}
+
+@-webkit-keyframes drop-74 {
+  100% {
+    top: 110%;
+    left: 110%;
+  }
+}
+
+@keyframes drop-74 {
+  100% {
+    top: 110%;
+    left: 110%;
+  }
+}
+.confetti-75 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 22%;
+  opacity: 0.8428425003;
+  -webkit-transform: rotate(229.3001545936deg);
+          transform: rotate(229.3001545936deg);
+  -webkit-animation: drop-75 4.8516929855s 0.5281294497s infinite;
+          animation: drop-75 4.8516929855s 0.5281294497s infinite;
+}
+
+@-webkit-keyframes drop-75 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-75 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-76 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 37%;
+  opacity: 1.1122411014;
+  -webkit-transform: rotate(125.5722554481deg);
+          transform: rotate(125.5722554481deg);
+  -webkit-animation: drop-76 4.4616270261s 0.9161344449s infinite;
+          animation: drop-76 4.4616270261s 0.9161344449s infinite;
+}
+
+@-webkit-keyframes drop-76 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+
+@keyframes drop-76 {
+  100% {
+    top: 110%;
+    left: 52%;
+  }
+}
+.confetti-77 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 35%;
+  opacity: 1.1820322059;
+  -webkit-transform: rotate(170.3548933712deg);
+          transform: rotate(170.3548933712deg);
+  -webkit-animation: drop-77 4.5419957477s 0.1693960147s infinite;
+          animation: drop-77 4.5419957477s 0.1693960147s infinite;
+}
+
+@-webkit-keyframes drop-77 {
+  100% {
+    top: 110%;
+    left: 41%;
+  }
+}
+
+@keyframes drop-77 {
+  100% {
+    top: 110%;
+    left: 41%;
+  }
+}
+.confetti-78 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 61%;
+  opacity: 0.686468061;
+  -webkit-transform: rotate(348.8205328955deg);
+          transform: rotate(348.8205328955deg);
+  -webkit-animation: drop-78 4.0385999247s 0.152210786s infinite;
+          animation: drop-78 4.0385999247s 0.152210786s infinite;
+}
+
+@-webkit-keyframes drop-78 {
+  100% {
+    top: 110%;
+    left: 69%;
+  }
+}
+
+@keyframes drop-78 {
+  100% {
+    top: 110%;
+    left: 69%;
+  }
+}
+.confetti-79 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 81%;
+  opacity: 1.0912142773;
+  -webkit-transform: rotate(199.8161629952deg);
+          transform: rotate(199.8161629952deg);
+  -webkit-animation: drop-79 4.4501934849s 0.0814855679s infinite;
+          animation: drop-79 4.4501934849s 0.0814855679s infinite;
+}
+
+@-webkit-keyframes drop-79 {
+  100% {
+    top: 110%;
+    left: 87%;
+  }
+}
+
+@keyframes drop-79 {
+  100% {
+    top: 110%;
+    left: 87%;
+  }
+}
+.confetti-80 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 6%;
+  opacity: 1.1991644668;
+  -webkit-transform: rotate(83.2149865812deg);
+          transform: rotate(83.2149865812deg);
+  -webkit-animation: drop-80 4.4599451071s 0.5514839908s infinite;
+          animation: drop-80 4.4599451071s 0.5514839908s infinite;
+}
+
+@-webkit-keyframes drop-80 {
+  100% {
+    top: 110%;
+    left: 18%;
+  }
+}
+
+@keyframes drop-80 {
+  100% {
+    top: 110%;
+    left: 18%;
+  }
+}
+.confetti-81 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 47%;
+  opacity: 0.6641447442;
+  -webkit-transform: rotate(314.8876416783deg);
+          transform: rotate(314.8876416783deg);
+  -webkit-animation: drop-81 4.8542346204s 0.882501147s infinite;
+          animation: drop-81 4.8542346204s 0.882501147s infinite;
+}
+
+@-webkit-keyframes drop-81 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+
+@keyframes drop-81 {
+  100% {
+    top: 110%;
+    left: 48%;
+  }
+}
+.confetti-82 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 25%;
+  opacity: 1.4869422738;
+  -webkit-transform: rotate(182.8931388152deg);
+          transform: rotate(182.8931388152deg);
+  -webkit-animation: drop-82 4.2838935236s 0.9882770256s infinite;
+          animation: drop-82 4.2838935236s 0.9882770256s infinite;
+}
+
+@-webkit-keyframes drop-82 {
+  100% {
+    top: 110%;
+    left: 32%;
+  }
+}
+
+@keyframes drop-82 {
+  100% {
+    top: 110%;
+    left: 32%;
+  }
+}
+.confetti-83 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 4%;
+  opacity: 0.9391262096;
+  -webkit-transform: rotate(329.6600542309deg);
+          transform: rotate(329.6600542309deg);
+  -webkit-animation: drop-83 4.574632785s 0.8273587695s infinite;
+          animation: drop-83 4.574632785s 0.8273587695s infinite;
+}
+
+@-webkit-keyframes drop-83 {
+  100% {
+    top: 110%;
+    left: 18%;
+  }
+}
+
+@keyframes drop-83 {
+  100% {
+    top: 110%;
+    left: 18%;
+  }
+}
+.confetti-84 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 82%;
+  opacity: 1.4802790994;
+  -webkit-transform: rotate(217.4681752695deg);
+          transform: rotate(217.4681752695deg);
+  -webkit-animation: drop-84 4.6382204315s 0.8349929422s infinite;
+          animation: drop-84 4.6382204315s 0.8349929422s infinite;
+}
+
+@-webkit-keyframes drop-84 {
+  100% {
+    top: 110%;
+    left: 85%;
+  }
+}
+
+@keyframes drop-84 {
+  100% {
+    top: 110%;
+    left: 85%;
+  }
+}
+.confetti-85 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 35%;
+  opacity: 1.3182017487;
+  -webkit-transform: rotate(3.0780477074deg);
+          transform: rotate(3.0780477074deg);
+  -webkit-animation: drop-85 4.6637162631s 0.489480916s infinite;
+          animation: drop-85 4.6637162631s 0.489480916s infinite;
+}
+
+@-webkit-keyframes drop-85 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+
+@keyframes drop-85 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+.confetti-86 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 45%;
+  opacity: 1.0173898558;
+  -webkit-transform: rotate(100.5262042897deg);
+          transform: rotate(100.5262042897deg);
+  -webkit-animation: drop-86 4.97985159s 0.6089134932s infinite;
+          animation: drop-86 4.97985159s 0.6089134932s infinite;
+}
+
+@-webkit-keyframes drop-86 {
+  100% {
+    top: 110%;
+    left: 54%;
+  }
+}
+
+@keyframes drop-86 {
+  100% {
+    top: 110%;
+    left: 54%;
+  }
+}
+.confetti-87 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 34%;
+  opacity: 1.121374503;
+  -webkit-transform: rotate(344.4206633057deg);
+          transform: rotate(344.4206633057deg);
+  -webkit-animation: drop-87 4.2828317389s 0.456596083s infinite;
+          animation: drop-87 4.2828317389s 0.456596083s infinite;
+}
+
+@-webkit-keyframes drop-87 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+
+@keyframes drop-87 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+.confetti-88 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 89%;
+  opacity: 0.8588207998;
+  -webkit-transform: rotate(109.9898656731deg);
+          transform: rotate(109.9898656731deg);
+  -webkit-animation: drop-88 4.9115932635s 0.1480736409s infinite;
+          animation: drop-88 4.9115932635s 0.1480736409s infinite;
+}
+
+@-webkit-keyframes drop-88 {
+  100% {
+    top: 110%;
+    left: 95%;
+  }
+}
+
+@keyframes drop-88 {
+  100% {
+    top: 110%;
+    left: 95%;
+  }
+}
+.confetti-89 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 87%;
+  opacity: 1.4563639146;
+  -webkit-transform: rotate(228.8305436296deg);
+          transform: rotate(228.8305436296deg);
+  -webkit-animation: drop-89 4.5261436627s 0.7042142347s infinite;
+          animation: drop-89 4.5261436627s 0.7042142347s infinite;
+}
+
+@-webkit-keyframes drop-89 {
+  100% {
+    top: 110%;
+    left: 91%;
+  }
+}
+
+@keyframes drop-89 {
+  100% {
+    top: 110%;
+    left: 91%;
+  }
+}
+.confetti-90 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 35%;
+  opacity: 0.8499866434;
+  -webkit-transform: rotate(327.2334557664deg);
+          transform: rotate(327.2334557664deg);
+  -webkit-animation: drop-90 4.2717113795s 0.3125975659s infinite;
+          animation: drop-90 4.2717113795s 0.3125975659s infinite;
+}
+
+@-webkit-keyframes drop-90 {
+  100% {
+    top: 110%;
+    left: 38%;
+  }
+}
+
+@keyframes drop-90 {
+  100% {
+    top: 110%;
+    left: 38%;
+  }
+}
+.confetti-91 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 49%;
+  opacity: 1.0333710541;
+  -webkit-transform: rotate(298.1935082572deg);
+          transform: rotate(298.1935082572deg);
+  -webkit-animation: drop-91 4.7202130618s 0.0277746084s infinite;
+          animation: drop-91 4.7202130618s 0.0277746084s infinite;
+}
+
+@-webkit-keyframes drop-91 {
+  100% {
+    top: 110%;
+    left: 57%;
+  }
+}
+
+@keyframes drop-91 {
+  100% {
+    top: 110%;
+    left: 57%;
+  }
+}
+.confetti-92 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 95%;
+  opacity: 1.4764191592;
+  -webkit-transform: rotate(194.7228696013deg);
+          transform: rotate(194.7228696013deg);
+  -webkit-animation: drop-92 4.029348777s 0.1883226024s infinite;
+          animation: drop-92 4.029348777s 0.1883226024s infinite;
+}
+
+@-webkit-keyframes drop-92 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+
+@keyframes drop-92 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+.confetti-93 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 57%;
+  opacity: 0.8502457973;
+  -webkit-transform: rotate(144.9399440134deg);
+          transform: rotate(144.9399440134deg);
+  -webkit-animation: drop-93 4.3992986601s 0.504284415s infinite;
+          animation: drop-93 4.3992986601s 0.504284415s infinite;
+}
+
+@-webkit-keyframes drop-93 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+
+@keyframes drop-93 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+.confetti-94 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 59%;
+  opacity: 1.4512941405;
+  -webkit-transform: rotate(343.4355885866deg);
+          transform: rotate(343.4355885866deg);
+  -webkit-animation: drop-94 4.941770862s 0.4192252676s infinite;
+          animation: drop-94 4.941770862s 0.4192252676s infinite;
+}
+
+@-webkit-keyframes drop-94 {
+  100% {
+    top: 110%;
+    left: 71%;
+  }
+}
+
+@keyframes drop-94 {
+  100% {
+    top: 110%;
+    left: 71%;
+  }
+}
+.confetti-95 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 53%;
+  opacity: 1.4723062845;
+  -webkit-transform: rotate(98.111795878deg);
+          transform: rotate(98.111795878deg);
+  -webkit-animation: drop-95 4.7185551333s 0.6592075832s infinite;
+          animation: drop-95 4.7185551333s 0.6592075832s infinite;
+}
+
+@-webkit-keyframes drop-95 {
+  100% {
+    top: 110%;
+    left: 65%;
+  }
+}
+
+@keyframes drop-95 {
+  100% {
+    top: 110%;
+    left: 65%;
+  }
+}
+.confetti-96 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 2%;
+  opacity: 0.527466388;
+  -webkit-transform: rotate(65.8589915906deg);
+          transform: rotate(65.8589915906deg);
+  -webkit-animation: drop-96 4.5730703843s 0.0681679835s infinite;
+          animation: drop-96 4.5730703843s 0.0681679835s infinite;
+}
+
+@-webkit-keyframes drop-96 {
+  100% {
+    top: 110%;
+    left: 4%;
+  }
+}
+
+@keyframes drop-96 {
+  100% {
+    top: 110%;
+    left: 4%;
+  }
+}
+.confetti-97 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 3%;
+  opacity: 0.8049884187;
+  -webkit-transform: rotate(141.559771588deg);
+          transform: rotate(141.559771588deg);
+  -webkit-animation: drop-97 4.7424283717s 0.325611134s infinite;
+          animation: drop-97 4.7424283717s 0.325611134s infinite;
+}
+
+@-webkit-keyframes drop-97 {
+  100% {
+    top: 110%;
+    left: 9%;
+  }
+}
+
+@keyframes drop-97 {
+  100% {
+    top: 110%;
+    left: 9%;
+  }
+}
+.confetti-98 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 27%;
+  opacity: 1.2444023523;
+  -webkit-transform: rotate(250.3468460554deg);
+          transform: rotate(250.3468460554deg);
+  -webkit-animation: drop-98 4.1119543704s 0.4088522279s infinite;
+          animation: drop-98 4.1119543704s 0.4088522279s infinite;
+}
+
+@-webkit-keyframes drop-98 {
+  100% {
+    top: 110%;
+    left: 36%;
+  }
+}
+
+@keyframes drop-98 {
+  100% {
+    top: 110%;
+    left: 36%;
+  }
+}
+.confetti-99 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 19%;
+  opacity: 1.1549360114;
+  -webkit-transform: rotate(103.3126336355deg);
+          transform: rotate(103.3126336355deg);
+  -webkit-animation: drop-99 4.3433876608s 0.9621156057s infinite;
+          animation: drop-99 4.3433876608s 0.9621156057s infinite;
+}
+
+@-webkit-keyframes drop-99 {
+  100% {
+    top: 110%;
+    left: 26%;
+  }
+}
+
+@keyframes drop-99 {
+  100% {
+    top: 110%;
+    left: 26%;
+  }
+}
+.confetti-100 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 43%;
+  opacity: 1.2249985066;
+  -webkit-transform: rotate(265.1695696753deg);
+          transform: rotate(265.1695696753deg);
+  -webkit-animation: drop-100 4.8610686995s 0.8962919923s infinite;
+          animation: drop-100 4.8610686995s 0.8962919923s infinite;
+}
+
+@-webkit-keyframes drop-100 {
+  100% {
+    top: 110%;
+    left: 56%;
+  }
+}
+
+@keyframes drop-100 {
+  100% {
+    top: 110%;
+    left: 56%;
+  }
+}
+.confetti-101 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 33%;
+  opacity: 0.745325508;
+  -webkit-transform: rotate(158.5897425951deg);
+          transform: rotate(158.5897425951deg);
+  -webkit-animation: drop-101 4.7565492225s 0.3642381982s infinite;
+          animation: drop-101 4.7565492225s 0.3642381982s infinite;
+}
+
+@-webkit-keyframes drop-101 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+
+@keyframes drop-101 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+.confetti-102 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 99%;
+  opacity: 1.3997685707;
+  -webkit-transform: rotate(115.9773609015deg);
+          transform: rotate(115.9773609015deg);
+  -webkit-animation: drop-102 4.1582826164s 0.5976378719s infinite;
+          animation: drop-102 4.1582826164s 0.5976378719s infinite;
+}
+
+@-webkit-keyframes drop-102 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+
+@keyframes drop-102 {
+  100% {
+    top: 110%;
+    left: 108%;
+  }
+}
+.confetti-103 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 86%;
+  opacity: 1.173227105;
+  -webkit-transform: rotate(4.4309538206deg);
+          transform: rotate(4.4309538206deg);
+  -webkit-animation: drop-103 4.0400628895s 0.7899191983s infinite;
+          animation: drop-103 4.0400628895s 0.7899191983s infinite;
+}
+
+@-webkit-keyframes drop-103 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+
+@keyframes drop-103 {
+  100% {
+    top: 110%;
+    left: 92%;
+  }
+}
+.confetti-104 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 67%;
+  opacity: 0.7430034671;
+  -webkit-transform: rotate(292.9803627984deg);
+          transform: rotate(292.9803627984deg);
+  -webkit-animation: drop-104 4.6880804569s 0.7783398262s infinite;
+          animation: drop-104 4.6880804569s 0.7783398262s infinite;
+}
+
+@-webkit-keyframes drop-104 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+
+@keyframes drop-104 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+.confetti-105 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
+  top: -10%;
+  left: 96%;
+  opacity: 1.2969632318;
+  -webkit-transform: rotate(43.4122292433deg);
+          transform: rotate(43.4122292433deg);
+  -webkit-animation: drop-105 4.2604117276s 0.5162635933s infinite;
+          animation: drop-105 4.2604117276s 0.5162635933s infinite;
+}
+
+@-webkit-keyframes drop-105 {
+  100% {
+    top: 110%;
+    left: 99%;
+  }
+}
+
+@keyframes drop-105 {
+  100% {
+    top: 110%;
+    left: 99%;
+  }
+}
+.confetti-106 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 63%;
+  opacity: 0.9191416897;
+  -webkit-transform: rotate(359.4034604619deg);
+          transform: rotate(359.4034604619deg);
+  -webkit-animation: drop-106 4.62925825s 0.2877142628s infinite;
+          animation: drop-106 4.62925825s 0.2877142628s infinite;
+}
+
+@-webkit-keyframes drop-106 {
+  100% {
+    top: 110%;
+    left: 66%;
+  }
+}
+
+@keyframes drop-106 {
+  100% {
+    top: 110%;
+    left: 66%;
+  }
+}
+.confetti-107 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 95%;
+  opacity: 0.6842752987;
+  -webkit-transform: rotate(182.0984714505deg);
+          transform: rotate(182.0984714505deg);
+  -webkit-animation: drop-107 4.3869690348s 0.7274759072s infinite;
+          animation: drop-107 4.3869690348s 0.7274759072s infinite;
+}
+
+@-webkit-keyframes drop-107 {
+  100% {
+    top: 110%;
+    left: 107%;
+  }
+}
+
+@keyframes drop-107 {
+  100% {
+    top: 110%;
+    left: 107%;
+  }
+}
+.confetti-108 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 40%;
+  opacity: 1.1381775714;
+  -webkit-transform: rotate(294.2519389569deg);
+          transform: rotate(294.2519389569deg);
+  -webkit-animation: drop-108 4.8318441872s 0.5244259115s infinite;
+          animation: drop-108 4.8318441872s 0.5244259115s infinite;
+}
+
+@-webkit-keyframes drop-108 {
+  100% {
+    top: 110%;
+    left: 51%;
+  }
+}
+
+@keyframes drop-108 {
+  100% {
+    top: 110%;
+    left: 51%;
+  }
+}
+.confetti-109 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 32%;
+  opacity: 0.6523577861;
+  -webkit-transform: rotate(328.4982005848deg);
+          transform: rotate(328.4982005848deg);
+  -webkit-animation: drop-109 4.0610812636s 0.1174925384s infinite;
+          animation: drop-109 4.0610812636s 0.1174925384s infinite;
+}
+
+@-webkit-keyframes drop-109 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+
+@keyframes drop-109 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+.confetti-110 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 92%;
+  opacity: 0.7062128747;
+  -webkit-transform: rotate(146.9368821986deg);
+          transform: rotate(146.9368821986deg);
+  -webkit-animation: drop-110 4.7367152323s 0.4608257744s infinite;
+          animation: drop-110 4.7367152323s 0.4608257744s infinite;
+}
+
+@-webkit-keyframes drop-110 {
+  100% {
+    top: 110%;
+    left: 96%;
+  }
+}
+
+@keyframes drop-110 {
+  100% {
+    top: 110%;
+    left: 96%;
+  }
+}
+.confetti-111 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 28%;
+  opacity: 0.9390425735;
+  -webkit-transform: rotate(200.8948791614deg);
+          transform: rotate(200.8948791614deg);
+  -webkit-animation: drop-111 4.6831833148s 0.6570856434s infinite;
+          animation: drop-111 4.6831833148s 0.6570856434s infinite;
+}
+
+@-webkit-keyframes drop-111 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+
+@keyframes drop-111 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+.confetti-112 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 78%;
+  opacity: 1.1050027426;
+  -webkit-transform: rotate(335.8513023097deg);
+          transform: rotate(335.8513023097deg);
+  -webkit-animation: drop-112 4.0118321534s 0.4292266155s infinite;
+          animation: drop-112 4.0118321534s 0.4292266155s infinite;
+}
+
+@-webkit-keyframes drop-112 {
+  100% {
+    top: 110%;
+    left: 84%;
+  }
+}
+
+@keyframes drop-112 {
+  100% {
+    top: 110%;
+    left: 84%;
+  }
+}
+.confetti-113 {
+  width: 5px;
+  height: 2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 71%;
+  opacity: 0.5883786561;
+  -webkit-transform: rotate(183.8881840627deg);
+          transform: rotate(183.8881840627deg);
+  -webkit-animation: drop-113 4.3468835943s 0.9783496121s infinite;
+          animation: drop-113 4.3468835943s 0.9783496121s infinite;
+}
+
+@-webkit-keyframes drop-113 {
+  100% {
+    top: 110%;
+    left: 76%;
+  }
+}
+
+@keyframes drop-113 {
+  100% {
+    top: 110%;
+    left: 76%;
+  }
+}
+.confetti-114 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 96%;
+  opacity: 0.8073208233;
+  -webkit-transform: rotate(165.1459531152deg);
+          transform: rotate(165.1459531152deg);
+  -webkit-animation: drop-114 4.8650343295s 0.6201224401s infinite;
+          animation: drop-114 4.8650343295s 0.6201224401s infinite;
+}
+
+@-webkit-keyframes drop-114 {
+  100% {
+    top: 110%;
+    left: 97%;
+  }
+}
+
+@keyframes drop-114 {
+  100% {
+    top: 110%;
+    left: 97%;
+  }
+}
+.confetti-115 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 7%;
+  opacity: 1.0772669349;
+  -webkit-transform: rotate(348.3068535551deg);
+          transform: rotate(348.3068535551deg);
+  -webkit-animation: drop-115 4.5941617442s 0.639811661s infinite;
+          animation: drop-115 4.5941617442s 0.639811661s infinite;
+}
+
+@-webkit-keyframes drop-115 {
+  100% {
+    top: 110%;
+    left: 16%;
+  }
+}
+
+@keyframes drop-115 {
+  100% {
+    top: 110%;
+    left: 16%;
+  }
+}
+.confetti-116 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 91%;
+  opacity: 0.9055780377;
+  -webkit-transform: rotate(26.4760369002deg);
+          transform: rotate(26.4760369002deg);
+  -webkit-animation: drop-116 4.5919455053s 0.3269604878s infinite;
+          animation: drop-116 4.5919455053s 0.3269604878s infinite;
+}
+
+@-webkit-keyframes drop-116 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+
+@keyframes drop-116 {
+  100% {
+    top: 110%;
+    left: 100%;
+  }
+}
+.confetti-117 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 92%;
+  opacity: 1.3504593641;
+  -webkit-transform: rotate(168.4514784996deg);
+          transform: rotate(168.4514784996deg);
+  -webkit-animation: drop-117 4.225757158s 0.0968216131s infinite;
+          animation: drop-117 4.225757158s 0.0968216131s infinite;
+}
+
+@-webkit-keyframes drop-117 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+
+@keyframes drop-117 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+.confetti-118 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 29%;
+  opacity: 0.869273134;
+  -webkit-transform: rotate(226.5267769154deg);
+          transform: rotate(226.5267769154deg);
+  -webkit-animation: drop-118 4.0257287454s 0.5581946585s infinite;
+          animation: drop-118 4.0257287454s 0.5581946585s infinite;
+}
+
+@-webkit-keyframes drop-118 {
+  100% {
+    top: 110%;
+    left: 38%;
+  }
+}
+
+@keyframes drop-118 {
+  100% {
+    top: 110%;
+    left: 38%;
+  }
+}
+.confetti-119 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 51%;
+  opacity: 0.7459994336;
+  -webkit-transform: rotate(26.2073358805deg);
+          transform: rotate(26.2073358805deg);
+  -webkit-animation: drop-119 4.129848039s 0.252294624s infinite;
+          animation: drop-119 4.129848039s 0.252294624s infinite;
+}
+
+@-webkit-keyframes drop-119 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+
+@keyframes drop-119 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+.confetti-120 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 32%;
+  opacity: 0.7509186405;
+  -webkit-transform: rotate(129.6917644653deg);
+          transform: rotate(129.6917644653deg);
+  -webkit-animation: drop-120 4.7153793594s 0.0719510709s infinite;
+          animation: drop-120 4.7153793594s 0.0719510709s infinite;
+}
+
+@-webkit-keyframes drop-120 {
+  100% {
+    top: 110%;
+    left: 40%;
+  }
+}
+
+@keyframes drop-120 {
+  100% {
+    top: 110%;
+    left: 40%;
+  }
+}
+.confetti-121 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 64%;
+  opacity: 0.7100694632;
+  -webkit-transform: rotate(41.8762254996deg);
+          transform: rotate(41.8762254996deg);
+  -webkit-animation: drop-121 4.9554990161s 0.2162019619s infinite;
+          animation: drop-121 4.9554990161s 0.2162019619s infinite;
+}
+
+@-webkit-keyframes drop-121 {
+  100% {
+    top: 110%;
+    left: 75%;
+  }
+}
+
+@keyframes drop-121 {
+  100% {
+    top: 110%;
+    left: 75%;
+  }
+}
+.confetti-122 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 20%;
+  opacity: 0.7402516938;
+  -webkit-transform: rotate(170.0247231661deg);
+          transform: rotate(170.0247231661deg);
+  -webkit-animation: drop-122 4.7187874205s 0.9242117922s infinite;
+          animation: drop-122 4.7187874205s 0.9242117922s infinite;
+}
+
+@-webkit-keyframes drop-122 {
+  100% {
+    top: 110%;
+    left: 34%;
+  }
+}
+
+@keyframes drop-122 {
+  100% {
+    top: 110%;
+    left: 34%;
+  }
+}
+.confetti-123 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 52%;
+  opacity: 1.0315119018;
+  -webkit-transform: rotate(157.2871993447deg);
+          transform: rotate(157.2871993447deg);
+  -webkit-animation: drop-123 4.2063571264s 0.2264305419s infinite;
+          animation: drop-123 4.2063571264s 0.2264305419s infinite;
+}
+
+@-webkit-keyframes drop-123 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+
+@keyframes drop-123 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+.confetti-124 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 12%;
+  opacity: 1.3172429544;
+  -webkit-transform: rotate(242.2784904705deg);
+          transform: rotate(242.2784904705deg);
+  -webkit-animation: drop-124 4.4576723314s 0.6079485252s infinite;
+          animation: drop-124 4.4576723314s 0.6079485252s infinite;
+}
+
+@-webkit-keyframes drop-124 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+
+@keyframes drop-124 {
+  100% {
+    top: 110%;
+    left: 23%;
+  }
+}
+.confetti-125 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 15%;
+  opacity: 1.0854779299;
+  -webkit-transform: rotate(111.5764189969deg);
+          transform: rotate(111.5764189969deg);
+  -webkit-animation: drop-125 4.4826524721s 0.7762268876s infinite;
+          animation: drop-125 4.4826524721s 0.7762268876s infinite;
+}
+
+@-webkit-keyframes drop-125 {
+  100% {
+    top: 110%;
+    left: 26%;
+  }
+}
+
+@keyframes drop-125 {
+  100% {
+    top: 110%;
+    left: 26%;
+  }
+}
+.confetti-126 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 47%;
+  opacity: 1.2710583679;
+  -webkit-transform: rotate(219.9537648581deg);
+          transform: rotate(219.9537648581deg);
+  -webkit-animation: drop-126 4.6843250167s 0.5351056747s infinite;
+          animation: drop-126 4.6843250167s 0.5351056747s infinite;
+}
+
+@-webkit-keyframes drop-126 {
+  100% {
+    top: 110%;
+    left: 56%;
+  }
+}
+
+@keyframes drop-126 {
+  100% {
+    top: 110%;
+    left: 56%;
+  }
+}
+.confetti-127 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 45%;
+  opacity: 1.0385504773;
+  -webkit-transform: rotate(4.6125481511deg);
+          transform: rotate(4.6125481511deg);
+  -webkit-animation: drop-127 4.3804432514s 0.5277445894s infinite;
+          animation: drop-127 4.3804432514s 0.5277445894s infinite;
+}
+
+@-webkit-keyframes drop-127 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+
+@keyframes drop-127 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+.confetti-128 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 53%;
+  opacity: 0.5532097812;
+  -webkit-transform: rotate(326.0432160569deg);
+          transform: rotate(326.0432160569deg);
+  -webkit-animation: drop-128 4.9741926049s 0.4823060252s infinite;
+          animation: drop-128 4.9741926049s 0.4823060252s infinite;
+}
+
+@-webkit-keyframes drop-128 {
+  100% {
+    top: 110%;
+    left: 65%;
+  }
+}
+
+@keyframes drop-128 {
+  100% {
+    top: 110%;
+    left: 65%;
+  }
+}
+.confetti-129 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #263672;
+  top: -10%;
+  left: 76%;
+  opacity: 1.3776629924;
+  -webkit-transform: rotate(148.5146682678deg);
+          transform: rotate(148.5146682678deg);
+  -webkit-animation: drop-129 4.8124735134s 0.9403738884s infinite;
+          animation: drop-129 4.8124735134s 0.9403738884s infinite;
+}
+
+@-webkit-keyframes drop-129 {
+  100% {
+    top: 110%;
+    left: 86%;
+  }
+}
+
+@keyframes drop-129 {
+  100% {
+    top: 110%;
+    left: 86%;
+  }
+}
+.confetti-130 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 29%;
+  opacity: 1.1209620031;
+  -webkit-transform: rotate(138.4521694494deg);
+          transform: rotate(138.4521694494deg);
+  -webkit-animation: drop-130 4.3823638937s 0.8741634996s infinite;
+          animation: drop-130 4.3823638937s 0.8741634996s infinite;
+}
+
+@-webkit-keyframes drop-130 {
+  100% {
+    top: 110%;
+    left: 36%;
+  }
+}
+
+@keyframes drop-130 {
+  100% {
+    top: 110%;
+    left: 36%;
+  }
+}
+.confetti-131 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 46%;
+  opacity: 0.9401842052;
+  -webkit-transform: rotate(15.3655283225deg);
+          transform: rotate(15.3655283225deg);
+  -webkit-animation: drop-131 4.8877300993s 0.7694523001s infinite;
+          animation: drop-131 4.8877300993s 0.7694523001s infinite;
+}
+
+@-webkit-keyframes drop-131 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+
+@keyframes drop-131 {
+  100% {
+    top: 110%;
+    left: 60%;
+  }
+}
+.confetti-132 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 73%;
+  opacity: 1.3236451295;
+  -webkit-transform: rotate(318.3527758563deg);
+          transform: rotate(318.3527758563deg);
+  -webkit-animation: drop-132 4.8403701959s 0.0585452781s infinite;
+          animation: drop-132 4.8403701959s 0.0585452781s infinite;
+}
+
+@-webkit-keyframes drop-132 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+
+@keyframes drop-132 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+.confetti-133 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #263672;
+  top: -10%;
+  left: 67%;
+  opacity: 1.0108869263;
+  -webkit-transform: rotate(109.1735464843deg);
+          transform: rotate(109.1735464843deg);
+  -webkit-animation: drop-133 4.0760284535s 0.85895215s infinite;
+          animation: drop-133 4.0760284535s 0.85895215s infinite;
+}
+
+@-webkit-keyframes drop-133 {
+  100% {
+    top: 110%;
+    left: 79%;
+  }
+}
+
+@keyframes drop-133 {
+  100% {
+    top: 110%;
+    left: 79%;
+  }
+}
+.confetti-134 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #263672;
+  top: -10%;
+  left: 19%;
+  opacity: 1.2127837464;
+  -webkit-transform: rotate(104.7905280495deg);
+          transform: rotate(104.7905280495deg);
+  -webkit-animation: drop-134 4.2602540095s 0.8379957008s infinite;
+          animation: drop-134 4.2602540095s 0.8379957008s infinite;
+}
+
+@-webkit-keyframes drop-134 {
+  100% {
+    top: 110%;
+    left: 31%;
+  }
+}
+
+@keyframes drop-134 {
+  100% {
+    top: 110%;
+    left: 31%;
+  }
+}
+.confetti-135 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 33%;
+  opacity: 1.2662606549;
+  -webkit-transform: rotate(255.0300492535deg);
+          transform: rotate(255.0300492535deg);
+  -webkit-animation: drop-135 4.7358698568s 0.0116609115s infinite;
+          animation: drop-135 4.7358698568s 0.0116609115s infinite;
+}
+
+@-webkit-keyframes drop-135 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+
+@keyframes drop-135 {
+  100% {
+    top: 110%;
+    left: 39%;
+  }
+}
+.confetti-136 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
+  top: -10%;
+  left: 36%;
+  opacity: 0.5752356122;
+  -webkit-transform: rotate(351.4165658502deg);
+          transform: rotate(351.4165658502deg);
+  -webkit-animation: drop-136 4.0078164708s 0.9564914329s infinite;
+          animation: drop-136 4.0078164708s 0.9564914329s infinite;
+}
+
+@-webkit-keyframes drop-136 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+
+@keyframes drop-136 {
+  100% {
+    top: 110%;
+    left: 42%;
+  }
+}
+.confetti-137 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 75%;
+  opacity: 0.5777580136;
+  -webkit-transform: rotate(174.0790431048deg);
+          transform: rotate(174.0790431048deg);
+  -webkit-animation: drop-137 4.3868744165s 0.5280592079s infinite;
+          animation: drop-137 4.3868744165s 0.5280592079s infinite;
+}
+
+@-webkit-keyframes drop-137 {
+  100% {
+    top: 110%;
+    left: 77%;
+  }
+}
+
+@keyframes drop-137 {
+  100% {
+    top: 110%;
+    left: 77%;
+  }
+}
+.confetti-138 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 74%;
+  opacity: 1.2985981499;
+  -webkit-transform: rotate(259.2153000312deg);
+          transform: rotate(259.2153000312deg);
+  -webkit-animation: drop-138 4.6390181786s 0.3953239047s infinite;
+          animation: drop-138 4.6390181786s 0.3953239047s infinite;
+}
+
+@-webkit-keyframes drop-138 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+
+@keyframes drop-138 {
+  100% {
+    top: 110%;
+    left: 82%;
+  }
+}
+.confetti-139 {
+  width: 5px;
+  height: 2px;
+  background-color: #263672;
+  top: -10%;
+  left: 61%;
+  opacity: 1.1720405579;
+  -webkit-transform: rotate(186.438314791deg);
+          transform: rotate(186.438314791deg);
+  -webkit-animation: drop-139 4.7736363709s 0.5351057321s infinite;
+          animation: drop-139 4.7736363709s 0.5351057321s infinite;
+}
+
+@-webkit-keyframes drop-139 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+
+@keyframes drop-139 {
+  100% {
+    top: 110%;
+    left: 62%;
+  }
+}
+.confetti-140 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 72%;
+  opacity: 1.3291302172;
+  -webkit-transform: rotate(236.721164304deg);
+          transform: rotate(236.721164304deg);
+  -webkit-animation: drop-140 4.8552496792s 0.0751807709s infinite;
+          animation: drop-140 4.8552496792s 0.0751807709s infinite;
+}
+
+@-webkit-keyframes drop-140 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+
+@keyframes drop-140 {
+  100% {
+    top: 110%;
+    left: 80%;
+  }
+}
+.confetti-141 {
+  width: 5px;
+  height: 2px;
+  background-color: #d13447;
+  top: -10%;
+  left: 70%;
+  opacity: 1.1949990328;
+  -webkit-transform: rotate(79.9053065368deg);
+          transform: rotate(79.9053065368deg);
+  -webkit-animation: drop-141 4.6261548368s 0.1131019012s infinite;
+          animation: drop-141 4.6261548368s 0.1131019012s infinite;
+}
+
+@-webkit-keyframes drop-141 {
+  100% {
+    top: 110%;
+    left: 79%;
+  }
+}
+
+@keyframes drop-141 {
+  100% {
+    top: 110%;
+    left: 79%;
+  }
+}
+.confetti-142 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #d13447;
+  top: -10%;
+  left: 13%;
+  opacity: 1.2695225442;
+  -webkit-transform: rotate(158.9137713705deg);
+          transform: rotate(158.9137713705deg);
+  -webkit-animation: drop-142 4.2041779692s 0.6362640956s infinite;
+          animation: drop-142 4.2041779692s 0.6362640956s infinite;
+}
+
+@-webkit-keyframes drop-142 {
+  100% {
+    top: 110%;
+    left: 14%;
+  }
+}
+
+@keyframes drop-142 {
+  100% {
+    top: 110%;
+    left: 14%;
+  }
+}
+.confetti-143 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 56%;
+  opacity: 0.6101948294;
+  -webkit-transform: rotate(32.0332864013deg);
+          transform: rotate(32.0332864013deg);
+  -webkit-animation: drop-143 4.8189606571s 0.1186224747s infinite;
+          animation: drop-143 4.8189606571s 0.1186224747s infinite;
+}
+
+@-webkit-keyframes drop-143 {
+  100% {
+    top: 110%;
+    left: 58%;
+  }
+}
+
+@keyframes drop-143 {
+  100% {
+    top: 110%;
+    left: 58%;
+  }
+}
+.confetti-144 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #d13447;
+  top: -10%;
+  left: 88%;
+  opacity: 0.8612712836;
+  -webkit-transform: rotate(15.0692612372deg);
+          transform: rotate(15.0692612372deg);
+  -webkit-animation: drop-144 4.3202033233s 0.9508673638s infinite;
+          animation: drop-144 4.3202033233s 0.9508673638s infinite;
+}
+
+@-webkit-keyframes drop-144 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+
+@keyframes drop-144 {
+  100% {
+    top: 110%;
+    left: 102%;
+  }
+}
+.confetti-145 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #263672;
+  top: -10%;
+  left: 48%;
+  opacity: 1.2388883461;
+  -webkit-transform: rotate(256.8646270421deg);
+          transform: rotate(256.8646270421deg);
+  -webkit-animation: drop-145 4.2354330006s 0.057423453s infinite;
+          animation: drop-145 4.2354330006s 0.057423453s infinite;
+}
+
+@-webkit-keyframes drop-145 {
+  100% {
+    top: 110%;
+    left: 63%;
+  }
+}
+
+@keyframes drop-145 {
+  100% {
+    top: 110%;
+    left: 63%;
+  }
+}
+.confetti-146 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 96%;
+  opacity: 0.7977793079;
+  -webkit-transform: rotate(201.3023476973deg);
+          transform: rotate(201.3023476973deg);
+  -webkit-animation: drop-146 4.8875221855s 0.569744532s infinite;
+          animation: drop-146 4.8875221855s 0.569744532s infinite;
+}
+
+@-webkit-keyframes drop-146 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+
+@keyframes drop-146 {
+  100% {
+    top: 110%;
+    left: 104%;
+  }
+}
+.confetti-147 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 67%;
+  opacity: 0.5591103951;
+  -webkit-transform: rotate(203.5608887392deg);
+          transform: rotate(203.5608887392deg);
+  -webkit-animation: drop-147 4.8826964709s 0.0294511751s infinite;
+          animation: drop-147 4.8826964709s 0.0294511751s infinite;
+}
+
+@-webkit-keyframes drop-147 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+
+@keyframes drop-147 {
+  100% {
+    top: 110%;
+    left: 73%;
+  }
+}
+.confetti-148 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 19%;
+  opacity: 0.7206240397;
+  -webkit-transform: rotate(273.8571843216deg);
+          transform: rotate(273.8571843216deg);
+  -webkit-animation: drop-148 4.0841559615s 0.7498018707s infinite;
+          animation: drop-148 4.0841559615s 0.7498018707s infinite;
+}
+
+@-webkit-keyframes drop-148 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+
+@keyframes drop-148 {
+  100% {
+    top: 110%;
+    left: 33%;
+  }
+}
+.confetti-149 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #ffbf00;
+  top: -10%;
+  left: 48%;
+  opacity: 1.0022417025;
+  -webkit-transform: rotate(359.8268481215deg);
+          transform: rotate(359.8268481215deg);
+  -webkit-animation: drop-149 4.062888328s 0.3632941298s infinite;
+          animation: drop-149 4.062888328s 0.3632941298s infinite;
+}
+
+@-webkit-keyframes drop-149 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+
+@keyframes drop-149 {
+  100% {
+    top: 110%;
+    left: 61%;
+  }
+}
+.confetti-150 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #d13447;
+  top: -10%;
+  left: 16%;
+  opacity: 0.6775514854;
+  -webkit-transform: rotate(188.5870480636deg);
+          transform: rotate(188.5870480636deg);
+  -webkit-animation: drop-150 4.2129729616s 0.7909795941s infinite;
+          animation: drop-150 4.2129729616s 0.7909795941s infinite;
+}
+
+@-webkit-keyframes drop-150 {
+  100% {
+    top: 110%;
+    left: 21%;
+  }
+}
+
+@keyframes drop-150 {
+  100% {
+    top: 110%;
+    left: 21%;
+  }
+}
+
+
+
+  main {
+    z-index: 10;
+  }
+
   ul li:first-child {
     background-color: black;
     color: #AFEED9;
@@ -21,3 +4126,5 @@
   }
 
 </style>
+
+
