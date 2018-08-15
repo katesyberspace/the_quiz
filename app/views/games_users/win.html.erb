@@ -7,6 +7,8 @@
       <li><%= User.find(result.user_id).name %> <%= result.score %></li>
     <% end %>
   </ul>
+
+  <a href="/games/new">exit</a>
 </main>
 <div class="wrapper">
   <div class="confetti-149"></div>
@@ -165,15 +167,31 @@
 
 <style>
 
-body {
-  margin: 0;
-  overflow: hidden;
-}
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  main {
+    z-index: 10;
+  }
+
+  ul li:first-child {
+    background-color: black;
+    color: #AFEED9;
+    animation: color 5000ms infinite ease-in-out; 
+  }
+
+  @keyframes color {
+    0% {color: #AFEED9}
+    50% {color: #69b4ff}
+    100% { color: #afeed9}
+  }
+
 
 .wrapper {
-  position: relative;
-  margin-top: -50%;
   min-height: 100vh;
+  z-index:-1;
 }
 
 [class|="confetti"] {
@@ -4107,23 +4125,6 @@ body {
   }
 }
 
-
-
-  main {
-    z-index: 10;
-  }
-
-  ul li:first-child {
-    background-color: black;
-    color: #AFEED9;
-    animation: color 5000ms infinite ease-in-out; 
-  }
-
-  @keyframes color {
-    0% {color: #AFEED9}
-    50% {color: #69b4ff}
-    100% { color: #afeed9}
-  }
 
 </style>
 
