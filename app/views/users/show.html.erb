@@ -1,1 +1,180 @@
-<h1> someone has logged in</h1>
+
+<div class="container">
+  <h1>Let's Quiz!</h1>
+  <h2>Are you ready,  <%= @user.name %>?</h2>
+
+  <p class="start-btn">click here to start</p>
+  <div id="timer">10 seconds per questions</div>
+
+  <main>
+    <div class="question-box">Get ready to play...</div>
+    <ul class="answers">
+      
+    </ul>
+
+  </main>
+
+</div>
+
+
+<script>
+
+  //Grab  elements from page
+  const timer = document.querySelector('#timer'),
+        question = document.querySelector('.question-box'),
+        answ = document.querySelector('.answers'),
+        startBtn = document.querySelector('.start-btn'),
+        main = document.querySelector('main');
+        
+  const result = JSON.parse('<%= @results.to_json.html_safe %>');
+  let questionNumber = 0;
+  let correctAnswer = ''
+  let score = 0;
+
+
+  //Main function run immediatelly at start
+  function start(){
+    startGame()
+  }
+  
+  function startTimer(num, func){
+    var startTimer = setInterval(function(){
+      timer.textContent = --num + 's left';
+      if(num === 0){
+        clearInterval(startTimer);
+        func()
+      }
+    },1000);
+  }
+  function startGame(){
+    
+    if(questionNumber <= 19){
+      displayQuestion(result, questionNumber)
+      displayAnswers(result, questionNumber)
+      answ.addEventListener('click', clicked)
+      questionNumber++
+      startTimer(1, startGame)
+    }else{
+      displayScore();
+    }
+  }
+
+  function displayQuestion(result, idx){
+    question.textContent = '#'+(questionNumber+1) + ':' + (decodeURIComponent(result[idx].question))
+  }
+
+  function displayAnswers (result, idx){
+    //Empty anwera container
+    answ.innerHTML = ''
+    //Create a new array with new answers
+    let answers = []
+    answers.push(...result[idx].incorrect_answers)
+    //Randomize the position of the correct answer
+    let randomIdx = Math.floor(Math.random() * 3)
+    answers.splice(randomIdx, 0, result[idx].correct_answer)
+    //Set the correct answer
+    correctAnswer = decodeURIComponent(result[idx].correct_answer)
+    //Display answers
+    answers.forEach(elem => {
+      let li = document.createElement('li')
+      li.textContent = decodeURIComponent(elem);
+      li.classList.add('answear')
+      answ.appendChild(li)
+    });
+    
+  }
+
+  // answ.addEventListener('click', clicked)
+
+  function clicked(){
+    event.target.classList.add('clicked')
+    answ.removeEventListener("click", clicked);
+    if(event.target.textContent === correctAnswer){
+      score++
+    }else if(event.target.textContent !== correctAnswer){
+      score--
+    }
+    console.log(score);
+  }
+
+  startBtn.addEventListener('click', start)
+
+  function displayScore(){
+    main.innerHTML = '';
+    let p = document.createElement('p');
+    p.textContent = score;
+    main.appendChild(p)
+  }
+
+
+</script>
+
+<style>
+  *{
+  box-sizing: border-box;
+  }
+
+  body{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .container{
+    margin: 0 auto;
+  }
+
+  .users{
+    background: #ccc;
+  }
+
+  .users li{
+    padding: 0;
+  }
+
+  h1{
+    color: red;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  #timer{
+    background-color: #ddd;
+    padding:10px 50px;
+    margin: 30px auto;
+    width: 50%;
+    font-size:24px;
+  }
+
+  .question-box{
+    background-color: #ddd;
+    padding: 50px 100px;
+    text-align: center;
+  }
+
+  .answers{
+    margin: 50px auto;
+    padding: 0;
+    width:50%;
+  }
+
+  .answers li{
+    background-color:#DDD;
+    padding:10px 25px;
+    margin:10px 0;
+    text-align: center;
+  }
+
+  .answers li:hover{
+    background:#ccc;
+    box-shadow: 10px 10px 8px #888888;
+  }
+
+  .clicked{
+    background: #000;
+    color: #fff;
+  }
+
+</style>
+

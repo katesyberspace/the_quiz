@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       # create new session - session is a global variable hash
       session[:user_id] = user.id
-      redirect_to "/games/new"
+      redirect_to "/users/#{user.id}"
     else
       redirect_to "/"
     end
