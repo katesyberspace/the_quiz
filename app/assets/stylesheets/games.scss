@@ -18,6 +18,10 @@ body {
 	h1 {
 		color: $header-color;
 	}
+
+	ul {
+		list-style: none;
+	}
 }
 
 form {

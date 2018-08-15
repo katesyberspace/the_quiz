@@ -1,6 +1,7 @@
 
 <div class="container">
   <h1>Let's Quiz!</h1>
+  <h2>Game: <%= @game.name %></h2>
 
   <div class="users">
     <h4>Now playing</h4>
@@ -33,6 +34,7 @@
 
 
 <script>
+
   //Grab  elements from page
   const timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
@@ -117,6 +119,12 @@
       body: score 
     }).then(res=> console.log(res))
   }
+
+    //SSE
+    var source = new EventSource('/games/live');
+      source.addEventListener('time', function(event) {
+      console.log(event.data);
+    });
 </script>
 
 <style>
