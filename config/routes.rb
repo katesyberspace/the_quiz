@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :games
   resources :users
 
+  put '/games/:id/finish', to: 'games_users#update'
+
   get '/', to: 'pages#home'
   get '/login', to: 'sessions#new'
 

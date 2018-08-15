@@ -15,4 +15,18 @@ class GamesUsersController < ApplicationController
 		end 
 	end
 
+	def update
+		@user = helper.current_user
+		@game = Game.find_by(id: params[:id])
+
+		user_record = GamesUser.find_by(game_id: @game.id)
+		user_record.score = params[:score]
+
+		if user_record.save
+			render :win
+		else 
+			redirect_to '/'
+		end
+	end
+
 end
