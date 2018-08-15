@@ -1,5 +1,9 @@
 class GamesUsersController < ApplicationController
 
+	def show
+		render :win
+	end
+
 	def create
 		#hardcoded to user, later change to current_user
 		@user = User.find_by(name: 'Kate')
@@ -23,7 +27,7 @@ class GamesUsersController < ApplicationController
 		user_record.score = params[:score]
 
 		if user_record.save
-			render :win
+			redirect_to '/games/:id/finish'
 		else 
 			redirect_to '/'
 		end
