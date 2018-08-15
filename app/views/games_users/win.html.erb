@@ -1,9 +1,23 @@
 <h1><%= @game.name %>: Results</h1>
 
 <% results = GamesUser.where(game_id: @game.id).order(score: :asc) %>
-<ul>
+<ul class="answers">
   <% results.each do |result|%>
     <li><%= User.find(result.user_id).name %> <%= result.score %></li>
   <% end %>
-
 </ul>
+
+<style>
+  ul li:first-child {
+    background-color: black;
+    color: #AFEED9;
+    animation: color 5000ms infinite ease-in-out; 
+  }
+
+  @keyframes color {
+    0% {color: #AFEED9}
+    50% {color: #69b4ff}
+    100% { color: #afeed9}
+  }
+
+</style>
