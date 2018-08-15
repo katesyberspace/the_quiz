@@ -4,7 +4,7 @@
   <h2>Game: <%= @game.name %></h2>
 
   <div class="users">
-    <h4>Now playing</h4>
+    <h4>Now playing:</h4>
 
     <ul>
       <% @users.each do |user|%>
@@ -20,7 +20,7 @@
     <p><%= @game.code %></p>
   </div>
 
-  <div id="timer">10s left</div>
+  <div id="timer">10 seconds left</div>
 
   <main>
     <div class="question-box">Get ready to play...</div>
@@ -53,7 +53,7 @@
 
   function startTimer(num, func){
     var startTimer = setInterval(function(){
-      timer.textContent = --num + 's left';
+      timer.textContent = --num + ' seconds left';
       if(num === 0){
         clearInterval(startTimer);
         func()
@@ -131,7 +131,7 @@
 </script>
 
 <style>
-  *{
+  /**{
   box-sizing: border-box;
   }
 
@@ -196,6 +196,6 @@
     background: #000;
     color: #fff;
   }
-
+*/
 </style>
 
