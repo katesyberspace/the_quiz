@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$header: 'Cormorant Garamond', serif;
 $main-font: 'Roboto Mono', monospace;
 $feat-color: hotpink;
 $header-color: #69b4ff;
 $box-color: #AFEED9;
 
+.disabled {
+    display: none;
+}
+
 * {
-  box-sizing: border-box;
+  	box-sizing: border-box;
 }
 
 .color-top {
@@ -28,8 +33,10 @@ body {
 
 	h1 {
 		color: $header-color;
-		text-transform: uppercase;
 		letter-spacing: 0.5em;
+		font-family: $header;
+		font-weight: bold;
+		font-size: 50px;
 	}
 
 	h2 {
