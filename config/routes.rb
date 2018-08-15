@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/games/live" => 'games#one_touch_status_live'
+  get "/games/live" => 'games#second_user_connected'
 
   resources :games_users
   resources :games
