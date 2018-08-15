@@ -15,7 +15,7 @@
     </ul>
   </div>
   <p><%= @game.id %></p>
-  <%# <button class="btn disabled" href="" onclick="startTimer(3, startGame)">Start Game</button> %>
+  <button class="btn disabled" href="/games/<%= params[:id] %>/start">Start Game</button>
   <div id="timer">10 seconds left</div>
 
   <main>
@@ -46,14 +46,6 @@
   let questionNumber = 0;
   let correctAnswer = ''
   let score = 0;
-
-
-  //Main function run immediatelly at start
-  (function start(){
-   
-    
-    // startTimer(3, startGame)
-  })()
 
   function startTimer(num, func){
     var startTimer = setInterval(function(){
@@ -102,8 +94,6 @@
     
   }
 
-  // answ.addEventListener('click', clicked)
-
   function clicked(){
     event.target.classList.add('clicked')
     answ.removeEventListener("click", clicked);
@@ -112,11 +102,9 @@
     }else if(event.target.textContent !== correctAnswer){
       score--
     }
-    console.log(score);
   }
 
   function displayScore(){
-
     fetch('/game/<%= params[:id] %>/finish',
     {
       method: "POST",
@@ -126,9 +114,12 @@
 
     //SSE
   var source = new EventSource("/sse");
-    source.addEventListener('users', event => {
-    // startBtn.classList.remove('disabled')
-    startTimer(10, startGame)
+  source.addEventListener('users', event => {
+    startBtn.classList.remove('disabled')
+    // startTimer(10, startGame)
+  });
+  source.addEventListener('game-start', event => {
+    console.log(event);
   });
 </script>
 
