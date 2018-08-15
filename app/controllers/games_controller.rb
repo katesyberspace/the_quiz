@@ -27,8 +27,7 @@ class GamesController < ApplicationController
 	end
 
 	def show
-		@response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
-		@results = @response["results"]
+	
 		# make sure the records are being updated
 		user_records = GamesUser.where(game_id: params[:id]) 
 		@users =[]
@@ -38,5 +37,22 @@ class GamesController < ApplicationController
 
 		@game = Game.find(params[:id]) 
 	end
+
+
+	def start
+		@game = Game.find(params[:id])
+		user_records = GamesUser.where(game_id: params[:id])
+		@users =[]
+		user_records.each do |user_record|
+			@users << User.find_by(id: user_record.user_id)
+		end
+		@response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
+		@results = @response["results"]
+		SseRailsEngine.send_event('game-start', { kate: 'gitlord' })
+		
+		render :show
+	end
+
+
 end
 
