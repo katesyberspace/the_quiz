@@ -15,16 +15,22 @@ class GamesUsersController < ApplicationController
 		@code = params[:code].upcase
 		@game = Game.find_by(code: @code)
 		if @game
-			if GamesUser.find_by(user_id: @user.id, game_id: @game.id)
-			else
-				@games_user = GamesUser.new
-				@games_user.user_id = @user.id
-				@games_user.game_id = @game.id
-				@games_user.save
-				@second_user = true
-				SseRailsEngine.send_event('users', { foo: 'bar' })
+			# limit two users joining a game
+			num_players_in_game = GamesUser.where(game_id: @game.id).length
+			if num_players_in_game < 2
+				if GamesUser.find_by(user_id: @user.id, game_id: @game.id)
+				else
+					@games_user = GamesUser.new
+					@games_user.user_id = @user.id
+					@games_user.game_id = @game.id
+					@games_user.save
+					@second_user = true
+					SseRailsEngine.send_event('users', { foo: 'bar' })
 
-				redirect_to "/games/#{ @game.id }"
+					redirect_to "/games/#{ @game.id }"
+				end
+			else
+				redirect_to '/games/new' 
 			end
 		else
 			redirect_to "/games/new"
