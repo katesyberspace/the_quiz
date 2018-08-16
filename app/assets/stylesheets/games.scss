@@ -7,6 +7,10 @@ $main-font: 'Roboto Mono', monospace;
 $feat-color: hotpink;
 $header-color: #69b4ff;
 $box-color: #AFEED9;
+$kate-color: #FFCC13;
+$fran-color: #00B7EB;
+$megan-color: #FF9273;
+
 
 .disabled {
   display: none;
@@ -32,6 +36,10 @@ body {
 	padding: 0;
 	margin: 0;
 
+	span {
+		color: $feat-color;
+	}
+
 	h1 {
 		color: $header-color;
 		letter-spacing: 0.3em;
@@ -49,15 +57,26 @@ body {
 		list-style: none;
 	}
 
-	nav ul {
-		display: flex;
-		flex-direction: row;
-	}
+	nav {
 
-	i {
-		font-size: 30px;
-	}
+		ul {
+			display: flex;
+			flex-direction: row;
 
+			li {
+				margin: 0 auto;
+			}
+
+			a {
+				color: $header-color;
+				text-decoration: underline;
+			}
+
+			a:hover {
+				color: $feat-color;
+			}
+		}
+	}
 }
 
 .about {
@@ -70,6 +89,35 @@ body {
 
 	p {
 		line-height: 30px;
+	}
+
+	i {
+		font-size: 30px;
+		margin: 5px;
+	}
+
+	.kate {
+		color: $kate-color;
+
+		a {
+			color: $kate-color;
+		}
+	}
+
+	.megan {
+		color: $megan-color;
+
+		a {
+			color: $megan-color;
+		}
+	}
+
+	.fran {
+		color: $fran-color;
+
+		a {
+			color: $fran-color;
+		}
 	}
 }
 
