@@ -112,16 +112,18 @@
   }
 
   function sendScore(){
-    fetch(`/game/<%= params[:id] %>/finish/${score}`,
-    {
-      method: "PUT"
-    }).then(res=> console.log(res))
+    // fetch(`/game/<%= params[:id] %>/finish/${score}`,
+    // {
+    //   method: "PUT"
+    // }).then(res=> console.log(res))
     let options = {
-      url: `/game/<%= params[:id] %>/finish/`,
+      url: `/games/<%= params[:id] %>/finish/${score}`,
       method: 'post',
-      data: {score}
+      headers: {
+        'X-CSRF-Token': $('meta[name=csrf-token]').prop('content')
+      }
     }
-    $.ajax('')
+    $.ajax(options)
   }
 
     //SSE
@@ -139,6 +141,7 @@
   });
 
   source.addEventListener('scores_received', event => {
+     console.log(event.data);
      
   });
 
