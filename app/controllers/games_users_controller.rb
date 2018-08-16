@@ -30,9 +30,13 @@ class GamesUsersController < ApplicationController
 		user_record.score = params[:score]
 
 		if user_record.save
-			redirect_to '/games/:id/finish'
+			binding.pry
+			num_scores_saved = GamesUser.where(game_id: params[:id]).where.not(score: nil)
+			if num_scores_saved == 2
+				SseRailsEngine.send_event('scores_received', { scoresReceived: true })
+			end
 		else 
-			redirect_to '/'
+			render :show
 		end
 	end
 

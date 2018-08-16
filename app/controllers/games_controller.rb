@@ -46,11 +46,12 @@ class GamesController < ApplicationController
 		user_records.each do |user_record|
 			@users << User.find_by(id: user_record.user_id)
 		end
-		@response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
+		@response = HTTParty.get("https://opentdb.com/api.php?amount=2&encode=url3986")
 		@results = @response["results"]
 		SseRailsEngine.send_event('game-start', { questions: @results })
 		
 		render json: {}
+		# render :show
 	end
 
 
