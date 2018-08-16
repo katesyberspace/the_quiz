@@ -24,8 +24,11 @@ class GamesUsersController < ApplicationController
 					@games_user.user_id = @user.id
 					@games_user.game_id = @game.id
 					@games_user.save
-					@second_user = true
-					SseRailsEngine.send_event('users', { foo: 'bar' })
+					@users = GamesUser.where(game_id: @game.id)
+					@user_id1 = User.find(@users[0].user_id)
+					@user_id2 = User.find(@users[1].user_id)
+					@usersNames = [@user_id1, @user_id2]
+					SseRailsEngine.send_event('users', { user: @usersNames })
 
 					redirect_to "/games/#{ @game.id }"
 				end

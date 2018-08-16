@@ -40,13 +40,11 @@
 <script>
 
   //Grab  elements from page
-  var timer = document.querySelector('#timer'),
-        question = document.querySelector('.question-box'),
-        answ = document.querySelector('.answers'),
-        startBtn = document.querySelector('.btn');
+  var timer    = document.querySelector('#timer'),
+      question = document.querySelector('.question-box'),
+      answ     = document.querySelector('.answers'),
+      startBtn = document.querySelector('.btn');
         
-  // const result = JSON.parse('<%= @results.to_json.html_safe %>');
-  // var questions = [];
   var questionNumber = 0;
   var correctAnswer = ''
   var score = 0;
@@ -72,7 +70,7 @@
       displayAnswers(questions, questionNumber)
       answ.addEventListener('click', clicked)
       questionNumber++
-      startTimer(7, startGame)
+      startTimer(10, startGame)
     }else{
 
       question.textContent = ''
@@ -87,7 +85,7 @@
   }
 
   function displayQuestion(questions, idx){
-    question.textContent = decodeURIComponent(questions[idx].question)
+    question.textContent = idx+1 + ". " + decodeURIComponent(questions[idx].question)
   }
 
   function displayAnswers (questions, idx){
@@ -122,10 +120,6 @@
   }
 
   function sendScore(){
-    // fetch(`/game/<%= params[:id] %>/finish/${score}`,
-    // {
-    //   method: "PUT"
-    // }).then(res=> console.log(res))
     let options = {
       url: `/games/<%= params[:id] %>/finish`,
       method: 'post',
@@ -142,6 +136,10 @@
 
   source.addEventListener('users', event => {
     startBtn.classList.remove('disabled')
+    $('.users > ul').empty()
+    $('.users > ul').append(`<li>${JSON.parse(event.data).user[0].name}</li>`);
+    $('.users > ul').append(`<li>${JSON.parse(event.data).user[1].name}</li>`);
+    
   });
 
   source.addEventListener('game-start', event => {
