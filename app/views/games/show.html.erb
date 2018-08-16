@@ -72,7 +72,10 @@
       question.textContent = ''
       answ.textContent = ''
 
-      sendScore();
+      let a = document.createElement('a')
+      a.textContent = 'Click here to see the result'
+      a.href = '/games/<%= params[:id] %>/finish'
+      question.appendChild(a)
     }
   }
 
@@ -131,18 +134,19 @@
 
   source.addEventListener('users', event => {
     startBtn.classList.remove('disabled')
-    // startTimer(10, startGame)
   });
 
   source.addEventListener('game-start', event => {
     questions = JSON.parse(event.data).questions
-    console.log(questions);
-    startTimer(10, startGame) 
+    startTimer(2, startGame) 
   });
 
   source.addEventListener('scores_received', event => {
-     console.log(event.data);
-     
+     console.log('it works');
+    //  let a = document.createElement('a')
+    //  a.textContent = 'Click here to see the result'
+    //  a.href = 'games/<%= params[:id] %>/finish'
+    //  question.appendChild(a)
   });
 
   function start() {
