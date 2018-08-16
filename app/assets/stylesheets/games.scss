@@ -32,7 +32,7 @@ body {
 	text-align: center;
 	font-family: $main-font;
 	color: black;
-	font-size: 20px;
+	font-size: 25px;
 	padding: 0;
 	margin: 0;
 
@@ -58,6 +58,8 @@ body {
 	}
 
 	nav {
+
+		font-size: 40px;
 
 		ul {
 			display: flex;
@@ -88,12 +90,22 @@ body {
 	}
 }
 
+.exit {
+	font-size: 50px;
+}
+
+.large {
+	font-size: 3em;
+	letter-spacing: 0.4em;
+}
+
 .about {
-	width: 60%;
+	width: 75%;
 	margin: 0 auto;
 
 	a {
 		color: $feat-color;
+		font-size: 30px;
 	}
 
 	a:hover {
@@ -102,10 +114,11 @@ body {
 
 	p {
 		line-height: 30px;
+		font-size: 30px;
 	}
 
 	i {
-		font-size: 30px;
+		font-size: 50px;
 		margin: 5px;
 	}
 
@@ -158,11 +171,12 @@ a:hover {
 }
 
 form {
+	font-size: 40px;
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 50px;
 
 	input {
 		background-color: aliceblue;
@@ -170,9 +184,9 @@ form {
 
 	input, 
 	button {
-		padding: 1em;
-		margin: 1em 0.5em;
-		font-size: 1.5em;
+		margin: 0.5em 0.5em;
+		padding: 0.7em;
+		font-size: 1em;
 		font-family: $main-font;
 		border: none;
 	}
@@ -208,8 +222,8 @@ form {
 }
 
 .code {
-	font-size: 18px;
-	width: 70%;
+	font-size: 22px;
+	width: 75%;
 	margin: 0 auto;
 }
 
@@ -232,11 +246,12 @@ ul {
 }
 
 #timer {
-	border: $feat-color 1px solid;
+	border: $feat-color 4px solid;
 	padding: 10px 50px;
 	margin: 30px auto;
-	width: 35%;
+	width: 45%;
 	color: $feat-color;
+	font-size: 1.5em;
 }
 
 .question-box {
@@ -436,17 +451,17 @@ ul {
   }
   
   100% {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
 #ready {
    animation: fontbulger 3s ease-in;
-   height: 39px;
+   height: 44px;
 }
 
 #ready {
-	font-size: 35px;
+	font-size: 40px;
 }
 
 //media queries
@@ -454,12 +469,13 @@ ul {
 //for browser screen
 
 @media only screen and (min-device-width: 700px) {
-	body {
-		font-size: 1em;
-	}
 
-	h1 {
-		padding-top: 0;
+	body {
+		h1 {
+			padding-top: 0;
+			font-size: 2.5em;
+			margin: 0;
+		}
 	}
 
 	.code, 
@@ -471,15 +487,57 @@ ul {
 		width: 65%;
 		text-align: center;
 		margin: 0 auto;
-		padding-top: 50px;
 	}
 
-	form input,
-	form button {
-		padding: 1em;
-		margin: 0.5em;
-		font-size: 0.8em;
+	form {
+
+		label,
+		input,
+		button {
+			padding: 0.5em;
+			margin: 0.2em;
+			font-size: 20px;
+		}
 	}
+
+	a {
+		font-size: 20px;
+	}
+
+	nav {
+
+		ul {
+			margin: 0 0 1em;
+		}
+	}
+
+	#timer {
+		font-size: 20px;
+	}
+
+	.large {
+		font-size: 2em;
+	}
+
+	@keyframes fontbulger {
+	  0% {
+	    font-size: 12px;
+	  }
+	  
+	  100% {
+	    font-size: 30px;
+	  }
+	}
+
+	#ready {
+	   animation: fontbulger 3s ease-in;
+	   height: 48px;
+	}
+
+	#ready {
+		font-size: 30px;
+	}
+		
 }
 
 //sticky note
@@ -487,6 +545,7 @@ ul {
 
 .anim750 {
   transition: all 750ms ease-in-out;
+  font-size: 20px;
 }
 
 #peel {
