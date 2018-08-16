@@ -23,14 +23,12 @@ class GamesUsersController < ApplicationController
 	end
 
 	def update
-		@user = helper.current_user
+		@user = helpers.current_user
 		@game = Game.find_by(id: params[:id])
-
 		user_record = GamesUser.find_by(game_id: @game.id)
 		user_record.score = params[:score]
 
 		if user_record.save
-			binding.pry
 			num_scores_saved = GamesUser.where(game_id: params[:id]).where.not(score: nil)
 			if num_scores_saved == 2
 				SseRailsEngine.send_event('scores_received', { scoresReceived: true })
