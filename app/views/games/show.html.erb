@@ -61,7 +61,7 @@
     },1000);
   }
   function startGame(){
-    if(questionNumber <= 19){
+    if(questionNumber <= questions.length-1){
       displayQuestion(questions, questionNumber)
       displayAnswers(questions, questionNumber)
       answ.addEventListener('click', clicked)
@@ -112,9 +112,9 @@
   }
 
   function sendScore(){
-    fetch('/game/<%= params[:id] %>/finish',
+    fetch('/games/<%= params[:id] %>/finish',
     {
-      method: "PUT",
+      method: "POST",
       body: score 
     }).then(res=> console.log(res))
   }
