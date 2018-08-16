@@ -42,7 +42,8 @@
         answ = document.querySelector('.answers'),
         startBtn = document.querySelector('.btn');
         
-  const result = JSON.parse('<%= @results.to_json.html_safe %>');
+  // const result = JSON.parse('<%= @results.to_json.html_safe %>');
+  let questions = '';
   let questionNumber = 0;
   let correctAnswer = ''
   let score = 0;
@@ -59,8 +60,8 @@
   function startGame(){
     
     if(questionNumber <= 19){
-      displayQuestion(result, questionNumber)
-      displayAnswers(result, questionNumber)
+      displayQuestion(questions, questionNumber)
+      displayAnswers(questions, questionNumber)
       answ.addEventListener('click', clicked)
       questionNumber++
       startTimer(7, startGame)
@@ -69,21 +70,21 @@
     }
   }
 
-  function displayQuestion(result, idx){
-    question.textContent = decodeURIComponent(result[idx].question)
+  function displayQuestion(questions, idx){
+    question.textContent = decodeURIComponent(questions[idx].question)
   }
 
-  function displayAnswers (result, idx){
+  function displayAnswers (questions, idx){
     //Empty anwera container
     answ.innerHTML = ''
     //Create a new array with new answers
     let answers = []
-    answers.push(...result[idx].incorrect_answers)
+    answers.push(...questions[idx].incorrect_answers)
     //Randomize the position of the correct answer
     let randomIdx = Math.floor(Math.random() * 3)
-    answers.splice(randomIdx, 0, result[idx].correct_answer)
+    answers.splice(randomIdx, 0, questions[idx].correct_answer)
     //Set the correct answer
-    correctAnswer = decodeURIComponent(result[idx].correct_answer)
+    correctAnswer = decodeURIComponent(questions[idx].correct_answer)
     //Display answers
     answers.forEach(elem => {
       let li = document.createElement('li')
@@ -119,7 +120,8 @@
     // startTimer(10, startGame)
   });
   source.addEventListener('game-start', event => {
-    console.log(event);
+    questions = JSON.parse(event.data).questions
+    startTimer(10, startGame)
   });
 </script>
 
