@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$header: 'Raleway', sans-serif;
+$header: 'M PLUS 1p', sans-serif;
 $main-font: 'Roboto Mono', monospace;
 $feat-color: hotpink;
 $header-color: #69b4ff;
@@ -34,10 +34,11 @@ body {
 
 	h1 {
 		color: $header-color;
-		letter-spacing: 0.5em;
+		letter-spacing: 0.3em;
 		font-family: $header;
 		font-weight: bold;
 		font-size: 4em;
+		text-transform: uppercase;
 	}
 
 	h2 {
@@ -337,6 +338,27 @@ ul {
 .box-wrapper.loading:nth-child(even) {
     transform: translate(-100%);        
     -webkit-transform: translate(-100%);
+}
+
+//ready to play text grow
+
+@keyframes fontbulger {
+  0% {
+    font-size: 12px;
+  }
+  
+  100% {
+    font-size: 30px;
+  }
+}
+
+#ready {
+   animation: fontbulger 3s ease-in;
+   height: 39px;
+}
+
+#ready {
+	font-size: 30px;
 }
 
 //media queries
