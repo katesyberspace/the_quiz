@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/games/:id/finish', to: 'games_users#show'
 
   get '/', to: 'pages#home'
+  get '/about', to: 'pages#about'
+  get '/howtoplay', to: 'pages#howtoplay'
   get '/login', to: 'sessions#new'
 
   post '/sessions', to: 'sessions#create'
