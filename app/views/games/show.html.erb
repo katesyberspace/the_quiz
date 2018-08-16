@@ -67,7 +67,7 @@
       questionNumber++
       startTimer(7, startGame)
     }else{
-      displayScore();
+      sendScore();
     }
   }
 
@@ -106,7 +106,7 @@
     }
   }
 
-  function displayScore(){
+  function sendScore(){
     fetch('/game/<%= params[:id] %>/finish',
     {
       method: "PUT",
