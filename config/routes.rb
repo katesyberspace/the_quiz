@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :games
   resources :users
 
-  put '/games/:id/finish', to: 'games_users#update'
+  post '/games/:id/finish', to: 'games_users#update'
   get '/games/:id/finish', to: 'games_users#show'
 
   get '/', to: 'pages#home'
