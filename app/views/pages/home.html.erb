@@ -1,38 +1,58 @@
-<h1 class="lets-quiz">Let's Quiz</h1>
-
-<p>Are you ready to play?</p>
-
-<%= form_tag "/users", method: 'post' do %>
-  <label for="">name</label>
-  <input type="text" name="name">
-  <label for="">email</label>
-  <input type="email" name="email">
-  <label for="">password</label>
-  <input type="password" name="password">
-  <button>sign up!</button>
-<% end %>
-
-<a href="/login"> already a user? log in </a>
-
-<div id="peel" class="anim750">
-	
-  	<div class="reveal circle_wrapper">
-		<div class="circle">FP, KS, MM</div>
-	</div>
-						
-	<div class="sticky anim750">
-		<div class="front circle_wrapper anim750">
-			<div class="circle anim750"></div>
-	  	</div>
-	</div>
-	
-  	<h4>made by...</h4>
-						
-  	<div class="sticky anim750">
-		<div class="back circle_wrapper anim750">
-			<div class="circle anim750"></div>
-		</div>
-	</div>
-						
+<div class="box-wrapper loading">
+	<h1 class="lets-quiz">Let's Quiz</h1>
 </div>
+
+<div class="box-wrapper loading">
+	<p>Are you ready to play?</p>
+</div>
+	
+<div class="box-wrapper loading">
+
+	<%= form_tag "/users", method: 'post' do %>
+	  <label for="">name</label>
+	  <input type="text" name="name">
+	  <label for="">email</label>
+	  <input type="email" name="email">
+	  <label for="">password</label>
+	  <input type="password" name="password">
+	  <button>sign up!</button>
+	<% end %>
+
+	<a href="/login"> already a user? log in </a>
+
+	<div class="block"></div>
+
+	<div id="peel" class="anim750">
+		
+	  	<div class="reveal circle_wrapper">
+			<div class="circle">FP, KS, MM</div>
+		</div>
+							
+		<div class="sticky anim750">
+			<div class="front circle_wrapper anim750">
+				<div class="circle anim750"></div>
+		  	</div>
+		</div>
+		
+	  	<h4>made by...</h4>
+							
+	  	<div class="sticky anim750">
+			<div class="back circle_wrapper anim750">
+				<div class="circle anim750"></div>
+			</div>
+		</div>
+							
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+	$('.box-wrapper').each(function(index, element) {
+    
+	    setTimeout(function(){
+	        element.classList.remove('loading');
+	    }, index * 500);
+
+	});
+</script>
 

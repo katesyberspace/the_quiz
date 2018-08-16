@@ -24,6 +24,7 @@ $box-color: #AFEED9;
 }
 
 body {
+	overflow-x: hidden;
 	text-align: center;
 	font-family: $main-font;
 	color: black;
@@ -102,6 +103,10 @@ form {
 	}
 }
 
+.block {
+	height: 75px;
+}
+
 .logout {
 	background-color: $feat-color;
 	border: $feat-color 3px solid;
@@ -168,7 +173,6 @@ ul {
 .answers li:hover {
     background: black;
     color: $box-color;
-    box-shadow: 5px 5px 8px $box-color;
 }
 
 .clicked {
@@ -316,6 +320,24 @@ ul {
   animation-duration: 100ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; }
+
+
+// box slide in
+
+.box-wrapper {
+    -webkit-transition-duration: 750ms;
+    transition-duration: 750ms;
+}
+
+.box-wrapper.loading:nth-child(odd) {
+    transform: translate(100%);
+    -webkit-transform: translate(100%);    
+}
+
+.box-wrapper.loading:nth-child(even) {
+    transform: translate(-100%);        
+    -webkit-transform: translate(-100%);
+}
 
 //media queries
 
