@@ -48,7 +48,7 @@ class GamesController < ApplicationController
 		end
 		@response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
 		@results = @response["results"]
-		SseRailsEngine.send_event('game-start', { kate: 'gitlord' })
+		SseRailsEngine.send_event('game-start', { questions: @results })
 		
 		render :show
 	end
