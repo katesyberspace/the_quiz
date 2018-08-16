@@ -87,6 +87,10 @@ body {
 		color: $feat-color;
 	}
 
+	a:hover {
+		text-decoration: underline;
+	}
+
 	p {
 		line-height: 30px;
 	}
