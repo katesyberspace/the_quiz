@@ -54,6 +54,10 @@ body {
 		flex-direction: row;
 	}
 
+	i {
+		font-size: 30px;
+	}
+
 }
 
 .about {
@@ -62,6 +66,10 @@ body {
 
 	a {
 		color: $feat-color;
+	}
+
+	p {
+		line-height: 30px;
 	}
 }
 
