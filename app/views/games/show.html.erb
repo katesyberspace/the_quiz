@@ -153,6 +153,7 @@
     fetch('/games/<%= params[:id] %>/start').then(res=>{
       console.log(res);
     })
+    document.querySelector('.start').classList.add('disabled')
   }
 </script>
 
