@@ -50,7 +50,7 @@ class GamesController < ApplicationController
 		@results = @response["results"]
 		SseRailsEngine.send_event('game-start', { questions: @results })
 		
-		render :show
+		render json: {}
 	end
 
 
