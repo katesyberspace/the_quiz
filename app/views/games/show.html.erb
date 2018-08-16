@@ -77,6 +77,7 @@
 
       question.textContent = ''
       answ.textContent = ''
+      sendScore();
 
       let a = document.createElement('a')
       a.textContent = 'Click here to see the result'
@@ -126,11 +127,12 @@
     //   method: "PUT"
     // }).then(res=> console.log(res))
     let options = {
-      url: `/games/<%= params[:id] %>/finish/${score}`,
+      url: `/games/<%= params[:id] %>/finish`,
       method: 'post',
       headers: {
         'X-CSRF-Token': $('meta[name=csrf-token]').prop('content')
-      }
+      },
+      data: {score}
     }
     $.ajax(options)
   }

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount SseRailsEngine::Engine, at: '/sse'
   get '/games/:id/start', to: 'games#start'
   get "/games/live" => 'games#second_user_connected'
-  post '/games/:id/finish/:score', to: 'games_users#update'
+  post '/games/:id/finish', to: 'games_users#update'
   
   resources :games_users
   resources :games
