@@ -8,9 +8,9 @@ $feat-color: hotpink;
 $header-color: #69b4ff;
 $box-color: #AFEED9;
 
-// .disabled {
-//   display: none;
-// }
+.disabled {
+  display: none;
+}
 
 * {
   	box-sizing: border-box;
@@ -54,6 +54,15 @@ body {
 		flex-direction: row;
 	}
 
+}
+
+.about {
+	width: 60%;
+	margin: 0 auto;
+
+	a {
+		color: $feat-color;
+	}
 }
 
 //animation for header
@@ -124,6 +133,10 @@ form {
 }
 
 //styles for show page
+
+.start {
+	color: $feat-color;
+}
 
 .code {
 	font-size: 18px;

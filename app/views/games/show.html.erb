@@ -14,9 +14,10 @@
       <% end %>
     </ul>
   </div>
-  <p><%= @game.id %></p>
-  <a class="btn disabled" onClick="start()">Start Game</a>
-  <div id="timer">10 seconds left</div>
+
+  <a class="btn disabled start" onClick="start()">Start Game</a>
+  <div id="timer" class="shake">10 seconds left</div>
+
 
   <main>
     <div class="question-box">Get ready to play...</div>
@@ -27,7 +28,7 @@
     <a class="received disabled"href=""></a>
 
     <div class="code">
-      <p>If you are the room creator, send the below code to your friends to invite them to play with you.</p>
+      <p>If you are the room creator, send the below code to your friends to invite them to play with you. Wait until they arrive and then you can Start Game.</p>
       <p><%= @game.code %></p>
     </div>
 
