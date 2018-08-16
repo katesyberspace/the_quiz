@@ -7,7 +7,8 @@ class GamesUsersController < ApplicationController
 
 	def create
 		@user = helpers.current_user
-		@game = Game.find_by(code: params[:code])
+		@code = params[:code].upcase
+		@game = Game.find_by(code: @code)
 		if @game
 			@games_user = GamesUser.new
 			@games_user.user_id = @user.id
