@@ -147,6 +147,10 @@ body {
 	}
 }
 
+.new p {
+  font-size: 20px;
+}
+
 //animation for header
 
 .lets-quiz {
@@ -263,13 +267,13 @@ ul {
 .answers {
     margin: 50px auto;
     padding: 0;
-    width: 50%;
+    width: 70%;
 }
 
 .answers li {
     border: $box-color 1px solid;
-    padding:10px 25px;
-    margin: 10px 0;
+    padding: 30px 35px;
+    margin: 20px 0;
     text-align: center;
     font-size: 1.5em;
 }
@@ -537,6 +541,14 @@ ul {
 	#ready {
 		font-size: 30px;
 	}
+
+  .answers li {
+    border: $box-color 1px solid;
+    padding: 15px 35px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
 		
 }
 

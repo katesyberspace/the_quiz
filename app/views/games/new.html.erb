@@ -7,6 +7,11 @@
 
 <h1>welcome <%= @user.name %>!</h1>
 
+<div class="new">
+	<p>Create or join a game. Invite someone to play against.</p> 
+	<p>20 questions. May the best player win.</p>
+</div>
+
 <form action="/games" method="post">
 	<label for="">create a new game</label>
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -15,7 +20,7 @@
 </form>
 
 <form action="/games_users" method="post">
-	<label for="">join game with code</label>
+	<label for="">join your friend's game with code</label>
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	<input type="text" name="code" placeholder="Type code here...">
 	<button>join game!</button>
