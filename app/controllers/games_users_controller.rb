@@ -1,8 +1,13 @@
 class GamesUsersController < ApplicationController
 	
 	def show
-		@game = Game.find(params[:id])
-		render :win
+		if helpers.logged_in?
+			@game = Game.find(params[:id])
+			render :win
+		else
+			redirect_to '/'		
+		end
+
 	end
 
 	def create
