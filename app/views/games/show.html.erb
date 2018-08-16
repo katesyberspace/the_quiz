@@ -25,6 +25,8 @@
       
     </ul>
 
+    <a class="received disabled"href=""></a>
+
     <div class="code">
       <p>If you are the room creator, send the below code to your friends to invite them to play with you. Wait until they arrive and then you can Start Game.</p>
       <p><%= @game.code %></p>
@@ -66,7 +68,11 @@
       questionNumber++
       startTimer(7, startGame)
     }else{
-      displayScore();
+
+      question.textContent = ''
+      answ.textContent = ''
+
+      sendScore();
     }
   }
 
@@ -105,7 +111,7 @@
     }
   }
 
-  function displayScore(){
+  function sendScore(){
     fetch('/game/<%= params[:id] %>/finish',
     {
       method: "PUT",
@@ -115,14 +121,20 @@
 
     //SSE
   var source = new EventSource("/sse");
+
   source.addEventListener('users', event => {
     startBtn.classList.remove('disabled')
     // startTimer(10, startGame)
   });
+
   source.addEventListener('game-start', event => {
     questions = JSON.parse(event.data).questions
     console.log(questions);
-    startTimer(10, startGame)
+    startTimer(10, startGame) 
+  });
+
+  source.addEventListener('scores_received', event => {
+     
   });
 
   function start() {
