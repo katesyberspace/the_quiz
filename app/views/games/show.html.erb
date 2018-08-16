@@ -37,16 +37,16 @@
 <script>
 
   //Grab  elements from page
-  const timer = document.querySelector('#timer'),
+  var timer = document.querySelector('#timer'),
         question = document.querySelector('.question-box'),
         answ = document.querySelector('.answers'),
         startBtn = document.querySelector('.btn');
         
   // const result = JSON.parse('<%= @results.to_json.html_safe %>');
-  let questions = '';
-  let questionNumber = 0;
-  let correctAnswer = ''
-  let score = 0;
+  var questions = '';
+  var questionNumber = 0;
+  var correctAnswer = ''
+  var score = 0;
 
   function startTimer(num, func){
     var startTimer = setInterval(function(){
