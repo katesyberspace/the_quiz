@@ -28,15 +28,14 @@ class GamesUsersController < ApplicationController
 		@game = Game.find_by(id: params[:id])
 		user_record = GamesUser.find_by(game_id: @game.id)
 		user_record.score = params[:score]
+		user_record.save
+		num_scores_saved = GamesUser.where(game_id: params[:id]).where.not(score: nil)
 
-		if user_record.save
-			num_scores_saved = GamesUser.where(game_id: params[:id]).where.not(score: nil)
-			if num_scores_saved == 2
-				SseRailsEngine.send_event('scores_received', { scoresReceived: true })
-			end
-		else 
-			render :show
+		if num_scores_saved.length == 2
+			SseRailsEngine.send_event('test', { scoresReceived: 'true' })
 		end
+
+		 
 	end
 
 end
