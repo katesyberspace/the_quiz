@@ -32,7 +32,7 @@ body {
 	text-align: center;
 	font-family: $main-font;
 	color: black;
-	font-size: 20px;
+	font-size: 25px;
 	padding: 0;
 	margin: 0;
 
@@ -58,6 +58,8 @@ body {
 	}
 
 	nav {
+
+		font-size: 40px;
 
 		ul {
 			display: flex;
@@ -158,11 +160,12 @@ a:hover {
 }
 
 form {
+	font-size: 40px;
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 50px;
 
 	input {
 		background-color: aliceblue;
@@ -170,9 +173,9 @@ form {
 
 	input, 
 	button {
-		padding: 1em;
-		margin: 1em 0.5em;
-		font-size: 1.5em;
+		margin: 0.5em 0.5em;
+		padding: 0.5em;
+		font-size: 1em;
 		font-family: $main-font;
 		border: none;
 	}
@@ -236,7 +239,9 @@ ul {
 	padding: 10px 50px;
 	margin: 30px auto;
 	width: 35%;
-	color: $feat-color;
+	color: white;
+	font-size: 1.5em;
+	background-color: $feat-color;
 }
 
 .question-box {
@@ -436,17 +441,17 @@ ul {
   }
   
   100% {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
 #ready {
    animation: fontbulger 3s ease-in;
-   height: 39px;
+   height: 44px;
 }
 
 #ready {
-	font-size: 35px;
+	font-size: 40px;
 }
 
 //media queries
@@ -454,12 +459,13 @@ ul {
 //for browser screen
 
 @media only screen and (min-device-width: 700px) {
-	body {
-		font-size: 1em;
-	}
 
-	h1 {
-		padding-top: 0;
+	body {
+		h1 {
+			padding-top: 0;
+			font-size: 2em;
+			margin: 0;
+		}
 	}
 
 	.code, 
@@ -471,14 +477,18 @@ ul {
 		width: 65%;
 		text-align: center;
 		margin: 0 auto;
-		padding-top: 50px;
 	}
 
+	form label,
 	form input,
 	form button {
 		padding: 1em;
 		margin: 0.5em;
-		font-size: 0.8em;
+		font-size: 20px;
+	}
+
+	nav a {
+		font-size: 20px;
 	}
 }
 
@@ -487,6 +497,7 @@ ul {
 
 .anim750 {
   transition: all 750ms ease-in-out;
+  font-size: 20px;
 }
 
 #peel {
