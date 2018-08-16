@@ -48,6 +48,12 @@ body {
 	ul {
 		list-style: none;
 	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row;
+	}
+
 }
 
 //animation for header
@@ -348,7 +354,7 @@ ul {
   }
   
   100% {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 
@@ -358,7 +364,7 @@ ul {
 }
 
 #ready {
-	font-size: 30px;
+	font-size: 35px;
 }
 
 //media queries
