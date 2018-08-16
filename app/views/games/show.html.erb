@@ -61,7 +61,7 @@
     },1000);
   }
   function startGame(){
-    if(questionNumber <= questions.length-1){
+    if(questionNumber <= questions.length - 1 ){
       displayQuestion(questions, questionNumber)
       displayAnswers(questions, questionNumber)
       answ.addEventListener('click', clicked)
@@ -112,13 +112,16 @@
   }
 
   function sendScore(){
-
-    fetch('/games/<%= params[:id] %>/finish',
+    fetch(`/game/<%= params[:id] %>/finish/${score}`,
     {
-      method: "POST",
-      body: score 
-
+      method: "PUT"
     }).then(res=> console.log(res))
+    let options = {
+      url: `/game/<%= params[:id] %>/finish/`,
+      method: 'post',
+      data: {score}
+    }
+    $.ajax('')
   }
 
     //SSE
