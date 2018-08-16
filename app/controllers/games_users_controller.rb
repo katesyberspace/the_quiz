@@ -15,14 +15,17 @@ class GamesUsersController < ApplicationController
 		@code = params[:code].upcase
 		@game = Game.find_by(code: @code)
 		if @game
-			@games_user = GamesUser.new
-			@games_user.user_id = @user.id
-			@games_user.game_id = @game.id
-			@games_user.save
-			@second_user = true
-			SseRailsEngine.send_event('users', { foo: 'bar' })
+			if GamesUser.find_by(user_id: @user.id, game_id: @game.id)
+			else
+				@games_user = GamesUser.new
+				@games_user.user_id = @user.id
+				@games_user.game_id = @game.id
+				@games_user.save
+				@second_user = true
+				SseRailsEngine.send_event('users', { foo: 'bar' })
 
-			redirect_to "/games/#{ @game.id }"
+				redirect_to "/games/#{ @game.id }"
+			end
 		else
 			redirect_to "/games/new"
 		end 
