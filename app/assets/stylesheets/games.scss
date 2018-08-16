@@ -246,13 +246,12 @@ ul {
 }
 
 #timer {
-	border: $feat-color 1px solid;
+	border: $feat-color 4px solid;
 	padding: 10px 50px;
 	margin: 30px auto;
 	width: 45%;
-	color: white;
+	color: $feat-color;
 	font-size: 1.5em;
-	background-color: $feat-color;
 }
 
 .question-box {
@@ -474,7 +473,7 @@ ul {
 	body {
 		h1 {
 			padding-top: 0;
-			font-size: 2em;
+			font-size: 2.5em;
 			margin: 0;
 		}
 	}
@@ -496,7 +495,7 @@ ul {
 		input,
 		button {
 			padding: 0.5em;
-			margin: 0.5em;
+			margin: 0.2em;
 			font-size: 20px;
 		}
 	}
@@ -519,7 +518,26 @@ ul {
 	.large {
 		font-size: 2em;
 	}
-	
+
+	@keyframes fontbulger {
+	  0% {
+	    font-size: 12px;
+	  }
+	  
+	  100% {
+	    font-size: 30px;
+	  }
+	}
+
+	#ready {
+	   animation: fontbulger 3s ease-in;
+	   height: 48px;
+	}
+
+	#ready {
+		font-size: 30px;
+	}
+		
 }
 
 //sticky note
