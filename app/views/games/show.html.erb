@@ -16,7 +16,7 @@
   </div>
 
   <a class="btn disabled start" onClick="start()">>> Start Game <<</a>
-  <div id="timer">10 seconds left</div>
+  <div id="timer">10 second countdown</div>
 
 
   <main>
@@ -28,8 +28,8 @@
     <a class="received disabled"href=""></a>
 
     <div class="code">
-      <p>If you are the room creator, send the below code to your friends to invite them to play with you. Wait until they arrive and then you can Start Game.</p>
-      <p><span><%= @game.code %></span></p>
+      <p><span class="large"><%= @game.code %></span></p>
+      <p>If you are the room creator, send the above code to a friend to invite them to play with you. When they arrive the <span>Start Game</span> button will appear.</p>
     </div>
 
   </main>
