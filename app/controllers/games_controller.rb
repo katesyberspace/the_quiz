@@ -32,14 +32,20 @@ class GamesController < ApplicationController
 	end
 
 	def show
+		#user can only access page if logged in
 		if helpers.logged_in?
 			# make sure the records are being updated
-			user_records = GamesUser.where(game_id: params[:id]) 
-			@users =[]
-			user_records.each do |user_record|
-				@users << User.find_by(id: user_record.user_id)
-			end
-			@game = Game.find(params[:id]) 
+			user_records = GamesUser.where(game_id: params[:id])
+			# user can only access the game if they've joined, else refirected to /games/new
+			if user_records.pluck(:user_id).include?(helpers.current_user.id) 
+				@users =[]
+				user_records.each do |user_record|
+					@users << User.find_by(id: user_record.user_id)
+				end
+				@game = Game.find(params[:id])
+			else
+				redirect_to '/games/new'
+			end 
 		else
 			redirect_to '/'
 		end

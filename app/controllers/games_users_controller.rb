@@ -1,9 +1,16 @@
 class GamesUsersController < ApplicationController
 	
 	def show
+		# user can only access page if logged in
 		if helpers.logged_in?
 			@game = Game.find(params[:id])
-			render :win
+			users_in_game = GamesUser.where(game_id: @game.id).pluck(:user_id)
+			# user can only access game if they've joined the game, else they're redirected to games/new page
+			if users_in_game.include?(helpers.current_user.id)
+				render :win
+			else	
+				redirect_to '/games/new'
+			end
 		else
 			redirect_to '/'		
 		end
