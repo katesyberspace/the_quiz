@@ -112,10 +112,12 @@
   }
 
   function sendScore(){
+
     fetch('/games/<%= params[:id] %>/finish',
     {
       method: "POST",
       body: score 
+
     }).then(res=> console.log(res))
   }
 
