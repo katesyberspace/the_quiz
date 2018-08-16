@@ -15,7 +15,7 @@
     </ul>
   </div>
   <p><%= @game.id %></p>
-  <a class="btn disabled" href="/games/<%= params[:id] %>/start">Start Game</a>
+  <a class="btn disabled" onClick="start()">Start Game</a>
   <div id="timer">10 seconds left</div>
 
   <main>
@@ -43,7 +43,7 @@
         startBtn = document.querySelector('.btn');
         
   // const result = JSON.parse('<%= @results.to_json.html_safe %>');
-  var questions = '';
+  // var questions = [];
   var questionNumber = 0;
   var correctAnswer = ''
   var score = 0;
@@ -58,7 +58,6 @@
     },1000);
   }
   function startGame(){
-    
     if(questionNumber <= 19){
       displayQuestion(questions, questionNumber)
       displayAnswers(questions, questionNumber)
@@ -108,7 +107,7 @@
   function displayScore(){
     fetch('/game/<%= params[:id] %>/finish',
     {
-      method: "POST",
+      method: "PUT",
       body: score 
     }).then(res=> console.log(res))
   }
@@ -121,8 +120,15 @@
   });
   source.addEventListener('game-start', event => {
     questions = JSON.parse(event.data).questions
+    console.log(questions);
     startTimer(10, startGame)
   });
+
+  function start() {
+    fetch('/games/<%= params[:id] %>/start').then(res=>{
+      console.log(res);
+    })
+  }
 </script>
 
 
