@@ -26,9 +26,8 @@ class GamesUsersController < ApplicationController
 	def update
 		@user = helpers.current_user
 		@game = Game.find_by(id: params[:id])
-		user_record = GamesUser.where(game_id: params[:id]).where(user_id: @user.id)
+		user_record = GamesUser.where(game_id: params[:id]).find_by(user_id: @user.id)
 		user_record.score = params[:score]
-		raise params[:score]
 		user_record.save
 		num_scores_saved = GamesUser.where(game_id: params[:id]).where.not(score: nil)
 

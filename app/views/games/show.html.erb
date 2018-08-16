@@ -146,11 +146,11 @@
 
   source.addEventListener('game-start', event => {
     questions = JSON.parse(event.data).questions
-    startTimer(2, startGame) 
+    startTimer(10, startGame) 
   });
 
   source.addEventListener('scores_received', event => {
-     console.log('it works');
+    
     //  let a = document.createElement('a')
     //  a.textContent = 'Click here to see the result'
     //  a.href = 'games/<%= params[:id] %>/finish'
@@ -159,7 +159,7 @@
 
   function start() {
     fetch('/games/<%= params[:id] %>/start').then(res=>{
-      console.log(res);
+      // console.log(res);
     })
     document.querySelector('.start').classList.add('disabled')
   }
