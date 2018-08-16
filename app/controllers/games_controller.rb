@@ -6,7 +6,12 @@ class GamesController < ApplicationController
 	end
 
 	def new
-		@user = helpers.current_user
+		if helpers.logged_in?
+			@user = helpers.current_user
+			render :new
+		else
+			redirect_to '/'
+		end
 	end
 
 	def create
@@ -27,15 +32,17 @@ class GamesController < ApplicationController
 	end
 
 	def show
-	
-		# make sure the records are being updated
-		user_records = GamesUser.where(game_id: params[:id]) 
-		@users =[]
-		user_records.each do |user_record|
-			@users << User.find_by(id: user_record.user_id)
+		if helpers.logged_in?
+			# make sure the records are being updated
+			user_records = GamesUser.where(game_id: params[:id]) 
+			@users =[]
+			user_records.each do |user_record|
+				@users << User.find_by(id: user_record.user_id)
+			end
+			@game = Game.find(params[:id]) 
+		else
+			redirect_to '/'
 		end
-
-		@game = Game.find(params[:id]) 
 	end
 
 

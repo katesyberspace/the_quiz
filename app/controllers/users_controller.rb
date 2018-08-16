@@ -13,10 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = helpers.current_user
-    @response = @response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
-    @results = @response["results"]
-  end
+  # def show
+    # @user = helpers.current_user
+    # @response = @response = HTTParty.get("https://opentdb.com/api.php?amount=20&encode=url3986")
+    # @results = @response["results"]
+  # end
 
 end
