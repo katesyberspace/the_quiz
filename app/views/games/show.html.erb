@@ -112,10 +112,9 @@
   }
 
   function sendScore(){
-    fetch('/game/<%= params[:id] %>/finish',
+    fetch(`/game/<%= params[:id] %>/finish/${score}`,
     {
-      method: "PUT",
-      body: score 
+      method: "PUT"
     }).then(res=> console.log(res))
   }
 
