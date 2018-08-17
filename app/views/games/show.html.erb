@@ -119,12 +119,14 @@
   }
 
   function clicked(){
-    event.target.classList.add('clicked')
-    answ.removeEventListener("click", clicked);
-    if(event.target.textContent === correctAnswer){
-      score++
-    }else if(event.target.textContent !== correctAnswer){
-      score--
+    if (event.target.tagName.toLowerCase() === 'li') {
+      event.target.classList.add('clicked')
+      answ.removeEventListener("click", clicked);
+      if(event.target.textContent === correctAnswer){
+        score++
+      }else if(event.target.textContent !== correctAnswer){
+        score--
+      }
     }
   }
 
