@@ -163,6 +163,8 @@
   <div class="confetti-0"></div>
 </div>
 
+<img class="koala" src="/koala.gif" alt="">
+
 
 
 <style>
@@ -170,14 +172,8 @@
   body {
     margin: 0;
     overflow: hidden;
-    animation: background-color 5000ms infinite ease-in-out;
   }
 
-  @keyframes background-color {
-    0% {background-color: white; color: black}
-    50% {background-color: black; color: #afeed9}
-    100% { background-color: white color: black}
-  }
 
   h1 {
     color: #69b4ff;
@@ -189,6 +185,7 @@
     50% {color: #afeed9}
     100% { color: #69b4ff}
 
+  }
   main {
     z-index: 10;
   }
@@ -211,6 +208,9 @@
     animation: none;
   }
 
+  .koala {
+    display: none;
+  }
 
   .wrapper {
     min-height: 100vh;
