@@ -1,24 +1,28 @@
-# README
+# LET'S QUIZ!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Take the challenge [here](http://letsquiz.herokuapp.com/), and challenge a friend... 
 
-Things you may want to cover:
+## What is it?
 
-* Ruby version
+A trivia quiz - play against a friend by sending them a join code. 20 questions - 10 seconds per question. Will you make the top three leaderboard?
 
-* System dependencies
+This full-stack web app game was made as the third group project for the General Assembly Web Development Immersive course. 
 
-* Configuration
+## Who made it?
 
-* Database creation
+* [Francesco Petraroli](https://www.linkedin.com/in/francescopetraroli/)
+* [Kate Sy](https://www.linkedin.com/in/katesy/)
+* [Megan McKeough](https://www.linkedin.com/in/megan-mckeough)
 
-* Database initialization
+## With what?
 
-* How to run the test suite
+* Ruby version 2.5.1
+* Rails version 5.2.1
+* Deployed with Heroku
+* [Open Trivia Database API](https://opentdb.com/api_config.php)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Thanks to:
 
-* Deployment instructions
+* CSS from [CSShake](https://csshake.surge.sh/) and [Patrick Kunka](https://codepen.io/patrickkunka/)
 
-* ...
+2018
