@@ -1,6 +1,6 @@
 class GamesUsersController < ApplicationController
 	
-	def show
+	def win
 		# user can only access page if logged in
 		if helpers.logged_in?
 			@game = Game.find(params[:id])

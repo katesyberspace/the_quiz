@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :games
   resources :users
 
-  get '/games/:id/finish', to: 'games_users#show'
+  get '/games/:id/finish', to: 'games_users#win'
 
   get '/', to: 'pages#home'
   get '/about', to: 'pages#about'
