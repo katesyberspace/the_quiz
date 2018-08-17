@@ -6,8 +6,7 @@ class GamesController < ApplicationController
 	end
 
 	def new
-		@prev_users = GamesUser.order(score: :desc)
-		# @prev_user = User.find_by(id: GamesUser.first.user_id)
+		@top_scores = GamesUser.order(score: :desc).where.not(score: nil).first(3)
 		if helpers.logged_in?
 			@user = helpers.current_user
 			render :new
