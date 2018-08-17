@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//mobile first css - media query for browser
+
 $header: 'M PLUS 1p', sans-serif;
 $main-font: 'Roboto Mono', monospace;
 $feat-color: hotpink;
@@ -147,6 +149,10 @@ body {
 	}
 }
 
+.new p {
+  font-size: 20px;
+}
+
 //animation for header
 
 .lets-quiz {
@@ -263,13 +269,13 @@ ul {
 .answers {
     margin: 50px auto;
     padding: 0;
-    width: 50%;
+    width: 70%;
 }
 
 .answers li {
     border: $box-color 1px solid;
-    padding:10px 25px;
-    margin: 10px 0;
+    padding: 30px 35px;
+    margin: 20px 0;
     text-align: center;
     font-size: 1.5em;
 }
@@ -284,9 +290,8 @@ ul {
     color: $box-color;
 }
 
-//shake
+//shake on timer
 
-//connect this to the timer so it shakes when
 .shake {
   display: inline-block;
   transform-origin: center center; }
@@ -296,16 +301,6 @@ ul {
 .shake-trigger .shake {
   animation-play-state: running; }
 
-// shake on hover
-.anc-shake-freeze,
-.anc-shake-constant.anc-shake-constant--hover:hover,
-.anc-shake-trigger:hover .anc-shake-constant.anc-shake-constant--hover {
-  animation-play-state: paused; }
-
-.anc-shake-freeze:hover,
-.anc-shake-trigger:hover .anc-shake-freeze, .anc-shake:hover,
-.anc-shake-trigger:hover .anc-shake {
-  animation-play-state: running; }
 
 @keyframes shake {
   2% {
@@ -417,13 +412,6 @@ ul {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; }
 
-//on hover
-.anc-shake:hover,
-.anc-shake-trigger:hover .anc-shake, .anc-shake.anc-shake-freeze, .anc-shake.anc-shake-constant {
-  animation-name: anc-shake;
-  animation-duration: 100ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; }
 
 
 // box slide in
@@ -531,12 +519,23 @@ ul {
 
 	#ready {
 	   animation: fontbulger 3s ease-in;
-	   height: 48px;
 	}
+
+  div#ready.box-wrapper {
+    height: 39px;
+  }
 
 	#ready {
 		font-size: 30px;
 	}
+
+  .answers li {
+    border: $box-color 1px solid;
+    padding: 15px 35px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
 		
 }
 
@@ -663,7 +662,16 @@ ul {
 	background-position: 0 100px;
 }
 
+// shake on hover
+.anc-shake-freeze,
+.anc-shake-constant.anc-shake-constant--hover:hover,
+.anc-shake-trigger:hover .anc-shake-constant.anc-shake-constant--hover {
+  animation-play-state: paused; }
 
+.anc-shake-freeze:hover,
+.anc-shake-trigger:hover .anc-shake-freeze, .anc-shake:hover,
+.anc-shake-trigger:hover .anc-shake {
+  animation-play-state: running; }
 
 @keyframes anc-shake {
   2% {
@@ -766,3 +774,11 @@ ul {
     transform: translate(-1.5px, 0.5px) rotate(1.5deg); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
+
+    //on hover
+.anc-shake:hover,
+.anc-shake-trigger:hover .anc-shake, .anc-shake.anc-shake-freeze, .anc-shake.anc-shake-constant {
+  animation-name: anc-shake;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
