@@ -31,5 +31,12 @@
 <% end %>
 <a href="/">back to home</a>
 
-<h4>Leaderboard</h4>
-<!-- <p><%#= @prev_user.name %> - <%#= @prev_user_score %></p> -->
+<h4>Leaderboard - Top Three!</h4>
+
+<div class="leaderboard">
+	<% @top_scores.each do |user| %>
+		<p><%= User.find(user.user_id).name %> - <%= user.score %></p>
+	<% end %>
+</div>
+
+
