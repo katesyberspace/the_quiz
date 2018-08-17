@@ -10,7 +10,7 @@
   <h1><%= @game.name %>: Results</h1>
 
   <% results = GamesUser.where(game_id: @game.id).order(score: :desc) %>
-  <ul class="answers">
+  <ul class="scores answers">
     <% results.each do |result|%>
       <li><%= User.find(result.user_id).name %> <%= result.score %></li>
     <% end %>
@@ -197,7 +197,7 @@
     z-index: 10;
   }
 
-  ul li:first-child {
+  .scores li:first-child {
     background-color: black;
     color: #AFEED9;
     animation: color 5000ms infinite ease-in-out; 
