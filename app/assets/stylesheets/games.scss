@@ -514,7 +514,7 @@ ul {
 
 	@keyframes fontbulger {
 	  0% {
-	    font-size: 12px;
+	    font-size: 14px;
 	  }
 	  
 	  100% {
@@ -526,13 +526,17 @@ ul {
 	   animation: fontbulger 3s ease-in;
 	}
 
+  #ready p {
+    margin: 0;
+  }
+
   div#ready.box-wrapper {
     height: 39px;
   }
 
-	#ready {
-		font-size: 30px;
-	}
+  #ready {
+    font-size: 30px;
+  }
 
   .answers li {
     border: $box-color 1px solid;
@@ -542,12 +546,10 @@ ul {
     font-size: 1.5em;
   }
 
-
   .leaderboard p {
     font-size: 15px;
     padding: none;
   }
-
 
 }
 
